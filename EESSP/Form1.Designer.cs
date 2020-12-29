@@ -32,11 +32,17 @@ namespace EESSP
             this.panelHome = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelPacienti = new System.Windows.Forms.Panel();
+            this.buttonEditPatient = new System.Windows.Forms.Button();
+            this.listViewPatients = new System.Windows.Forms.ListView();
+            this.buttonAddPatient = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.pacientiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultatiiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajutorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonDeathPatient = new System.Windows.Forms.Button();
+            this.buttonExitedPatient = new System.Windows.Forms.Button();
             this.panelHome.SuspendLayout();
+            this.panelPacienti.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,10 +68,43 @@ namespace EESSP
             // 
             // panelPacienti
             // 
+            this.panelPacienti.Controls.Add(this.buttonExitedPatient);
+            this.panelPacienti.Controls.Add(this.buttonDeathPatient);
+            this.panelPacienti.Controls.Add(this.buttonEditPatient);
+            this.panelPacienti.Controls.Add(this.listViewPatients);
+            this.panelPacienti.Controls.Add(this.buttonAddPatient);
             this.panelPacienti.Location = new System.Drawing.Point(13, 27);
             this.panelPacienti.Name = "panelPacienti";
             this.panelPacienti.Size = new System.Drawing.Size(775, 410);
             this.panelPacienti.TabIndex = 2;
+            // 
+            // buttonEditPatient
+            // 
+            this.buttonEditPatient.Location = new System.Drawing.Point(19, 134);
+            this.buttonEditPatient.Name = "buttonEditPatient";
+            this.buttonEditPatient.Size = new System.Drawing.Size(119, 23);
+            this.buttonEditPatient.TabIndex = 2;
+            this.buttonEditPatient.Text = "Modificare pacient";
+            this.buttonEditPatient.UseVisualStyleBackColor = true;
+            // 
+            // listViewPatients
+            // 
+            this.listViewPatients.GridLines = true;
+            this.listViewPatients.HideSelection = false;
+            this.listViewPatients.Location = new System.Drawing.Point(235, 60);
+            this.listViewPatients.Name = "listViewPatients";
+            this.listViewPatients.Size = new System.Drawing.Size(525, 336);
+            this.listViewPatients.TabIndex = 1;
+            this.listViewPatients.UseCompatibleStateImageBehavior = false;
+            // 
+            // buttonAddPatient
+            // 
+            this.buttonAddPatient.Location = new System.Drawing.Point(19, 60);
+            this.buttonAddPatient.Name = "buttonAddPatient";
+            this.buttonAddPatient.Size = new System.Drawing.Size(119, 23);
+            this.buttonAddPatient.TabIndex = 0;
+            this.buttonAddPatient.Text = "Adaugare pacient";
+            this.buttonAddPatient.UseVisualStyleBackColor = true;
             // 
             // menuStrip
             // 
@@ -98,20 +137,39 @@ namespace EESSP
             this.ajutorMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ajutorMenuItem.Text = "&Ajutor";
             // 
+            // buttonDeathPatient
+            // 
+            this.buttonDeathPatient.Location = new System.Drawing.Point(19, 204);
+            this.buttonDeathPatient.Name = "buttonDeathPatient";
+            this.buttonDeathPatient.Size = new System.Drawing.Size(119, 23);
+            this.buttonDeathPatient.TabIndex = 3;
+            this.buttonDeathPatient.Text = "Inregistrare deces";
+            this.buttonDeathPatient.UseVisualStyleBackColor = true;
+            // 
+            // buttonExitedPatient
+            // 
+            this.buttonExitedPatient.Location = new System.Drawing.Point(19, 270);
+            this.buttonExitedPatient.Name = "buttonExitedPatient";
+            this.buttonExitedPatient.Size = new System.Drawing.Size(119, 23);
+            this.buttonExitedPatient.TabIndex = 4;
+            this.buttonExitedPatient.Text = "Iesire pacient";
+            this.buttonExitedPatient.UseVisualStyleBackColor = true;
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelHome);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.panelPacienti);
+            this.Controls.Add(this.panelHome);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainApp";
             this.Text = "Sanitary Manager";
             this.Load += new System.EventHandler(this.onLoad);
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();
+            this.panelPacienti.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -128,6 +186,11 @@ namespace EESSP
         private System.Windows.Forms.ToolStripMenuItem pacientiMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultatiiMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajutorMenuItem;
+        private System.Windows.Forms.Button buttonAddPatient;
+        private System.Windows.Forms.ListView listViewPatients;
+        private System.Windows.Forms.Button buttonEditPatient;
+        private System.Windows.Forms.Button buttonDeathPatient;
+        private System.Windows.Forms.Button buttonExitedPatient;
     }
 }
 
