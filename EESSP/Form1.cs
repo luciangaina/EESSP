@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace EESSP
 {
-    public partial class Form1 : Form
+    public partial class MainApp : Form
     {
         private ProjectContext _dbContext;
-        public Form1()
+        public MainApp()
         {
             InitializeComponent();
         }
@@ -25,6 +25,13 @@ namespace EESSP
             _dbContext = new ProjectContext();
 
             var pacienti = await _dbContext.Pacient.ToListAsync();
+
+            panelHome.BringToFront();
+        }
+
+        private void pacientiMenuItem_onClick(object sender, EventArgs e)
+        {
+            panelPacienti.BringToFront();
         }
     }
 }
