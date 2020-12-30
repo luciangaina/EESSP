@@ -33,5 +33,11 @@ namespace EESSP
         {
             panelPacienti.BringToFront();
         }
+
+        private void buttonAddPatient_Click(object sender, EventArgs e)
+        {
+            Form2 adaugarePacient = new Form2();
+            adaugarePacient.Show();
+        }
     }
 }

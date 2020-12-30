@@ -32,6 +32,8 @@ namespace EESSP
             this.panelHome = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelPacienti = new System.Windows.Forms.Panel();
+            this.buttonExitedPatient = new System.Windows.Forms.Button();
+            this.buttonDeathPatient = new System.Windows.Forms.Button();
             this.buttonEditPatient = new System.Windows.Forms.Button();
             this.listViewPatients = new System.Windows.Forms.ListView();
             this.buttonAddPatient = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@ namespace EESSP
             this.pacientiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultatiiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajutorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonDeathPatient = new System.Windows.Forms.Button();
-            this.buttonExitedPatient = new System.Windows.Forms.Button();
             this.panelHome.SuspendLayout();
             this.panelPacienti.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -78,6 +78,24 @@ namespace EESSP
             this.panelPacienti.Size = new System.Drawing.Size(775, 410);
             this.panelPacienti.TabIndex = 2;
             // 
+            // buttonExitedPatient
+            // 
+            this.buttonExitedPatient.Location = new System.Drawing.Point(19, 270);
+            this.buttonExitedPatient.Name = "buttonExitedPatient";
+            this.buttonExitedPatient.Size = new System.Drawing.Size(119, 23);
+            this.buttonExitedPatient.TabIndex = 4;
+            this.buttonExitedPatient.Text = "Iesire pacient";
+            this.buttonExitedPatient.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeathPatient
+            // 
+            this.buttonDeathPatient.Location = new System.Drawing.Point(19, 204);
+            this.buttonDeathPatient.Name = "buttonDeathPatient";
+            this.buttonDeathPatient.Size = new System.Drawing.Size(119, 23);
+            this.buttonDeathPatient.TabIndex = 3;
+            this.buttonDeathPatient.Text = "Inregistrare deces";
+            this.buttonDeathPatient.UseVisualStyleBackColor = true;
+            // 
             // buttonEditPatient
             // 
             this.buttonEditPatient.Location = new System.Drawing.Point(19, 134);
@@ -105,6 +123,7 @@ namespace EESSP
             this.buttonAddPatient.TabIndex = 0;
             this.buttonAddPatient.Text = "Adaugare pacient";
             this.buttonAddPatient.UseVisualStyleBackColor = true;
+            this.buttonAddPatient.Click += new System.EventHandler(this.buttonAddPatient_Click);
             // 
             // menuStrip
             // 
@@ -136,24 +155,6 @@ namespace EESSP
             this.ajutorMenuItem.Name = "ajutorMenuItem";
             this.ajutorMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ajutorMenuItem.Text = "&Ajutor";
-            // 
-            // buttonDeathPatient
-            // 
-            this.buttonDeathPatient.Location = new System.Drawing.Point(19, 204);
-            this.buttonDeathPatient.Name = "buttonDeathPatient";
-            this.buttonDeathPatient.Size = new System.Drawing.Size(119, 23);
-            this.buttonDeathPatient.TabIndex = 3;
-            this.buttonDeathPatient.Text = "Inregistrare deces";
-            this.buttonDeathPatient.UseVisualStyleBackColor = true;
-            // 
-            // buttonExitedPatient
-            // 
-            this.buttonExitedPatient.Location = new System.Drawing.Point(19, 270);
-            this.buttonExitedPatient.Name = "buttonExitedPatient";
-            this.buttonExitedPatient.Size = new System.Drawing.Size(119, 23);
-            this.buttonExitedPatient.TabIndex = 4;
-            this.buttonExitedPatient.Text = "Iesire pacient";
-            this.buttonExitedPatient.UseVisualStyleBackColor = true;
             // 
             // MainApp
             // 

@@ -55,7 +55,6 @@ namespace EESSP
             this.textBoxJudet = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButtonAsigurat = new System.Windows.Forms.RadioButton();
             this.textBoxTelefon = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,11 +72,13 @@ namespace EESSP
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxAsigurat = new System.Windows.Forms.CheckBox();
             this.panelAddPatient.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAddPatient
             // 
+            this.panelAddPatient.Controls.Add(this.checkBoxAsigurat);
             this.panelAddPatient.Controls.Add(this.label23);
             this.panelAddPatient.Controls.Add(this.textBoxInaltime);
             this.panelAddPatient.Controls.Add(this.label22);
@@ -103,7 +104,6 @@ namespace EESSP
             this.panelAddPatient.Controls.Add(this.textBoxJudet);
             this.panelAddPatient.Controls.Add(this.label11);
             this.panelAddPatient.Controls.Add(this.label10);
-            this.panelAddPatient.Controls.Add(this.radioButtonAsigurat);
             this.panelAddPatient.Controls.Add(this.textBoxTelefon);
             this.panelAddPatient.Controls.Add(this.label9);
             this.panelAddPatient.Controls.Add(this.label8);
@@ -349,17 +349,6 @@ namespace EESSP
             this.label10.TabIndex = 18;
             this.label10.Text = "Asigurare:";
             // 
-            // radioButtonAsigurat
-            // 
-            this.radioButtonAsigurat.AutoSize = true;
-            this.radioButtonAsigurat.Location = new System.Drawing.Point(520, 162);
-            this.radioButtonAsigurat.Name = "radioButtonAsigurat";
-            this.radioButtonAsigurat.Size = new System.Drawing.Size(69, 19);
-            this.radioButtonAsigurat.TabIndex = 17;
-            this.radioButtonAsigurat.TabStop = true;
-            this.radioButtonAsigurat.Text = "Asigurat";
-            this.radioButtonAsigurat.UseVisualStyleBackColor = true;
-            // 
             // textBoxTelefon
             // 
             this.textBoxTelefon.Location = new System.Drawing.Point(293, 161);
@@ -506,6 +495,16 @@ namespace EESSP
             this.label1.TabIndex = 0;
             this.label1.Text = "Adaugare pacient";
             // 
+            // checkBoxAsigurat
+            // 
+            this.checkBoxAsigurat.AutoSize = true;
+            this.checkBoxAsigurat.Location = new System.Drawing.Point(520, 163);
+            this.checkBoxAsigurat.Name = "checkBoxAsigurat";
+            this.checkBoxAsigurat.Size = new System.Drawing.Size(70, 19);
+            this.checkBoxAsigurat.TabIndex = 43;
+            this.checkBoxAsigurat.Text = "Asigurat";
+            this.checkBoxAsigurat.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -523,7 +522,6 @@ namespace EESSP
         #endregion
 
         private System.Windows.Forms.Panel panelAddPatient;
-        private System.Windows.Forms.TextBox textBoxApartment;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxScara;
         private System.Windows.Forms.Label label16;
@@ -531,25 +529,20 @@ namespace EESSP
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxNumar;
-        private System.Windows.Forms.TextBox textBoxStreet;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxLocalitate;
         private System.Windows.Forms.TextBox textBoxJudet;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButtonInsurance;
         private System.Windows.Forms.TextBox textBoxTelefon;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxAge;
-        private System.Windows.Forms.DateTimePicker datePickerBirthdate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNume;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxGender;
         private System.Windows.Forms.TextBox textBoxNumarFisa;
         private System.Windows.Forms.TextBox textBoxCNP;
         private System.Windows.Forms.Label label4;
@@ -558,7 +551,6 @@ namespace EESSP
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox comboBoxGrSanguina;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
@@ -569,9 +561,9 @@ namespace EESSP
         private System.Windows.Forms.TextBox textBoxGen;
         private System.Windows.Forms.TextBox textBoxPrenume;
         private System.Windows.Forms.DateTimePicker datePickerDataNastere;
-        private System.Windows.Forms.RadioButton radioButtonAsigurat;
         private System.Windows.Forms.TextBox textBoxStrada;
         private System.Windows.Forms.TextBox textBoxApartament;
         private System.Windows.Forms.ComboBox comboBoxRh;
+        private System.Windows.Forms.CheckBox checkBoxAsigurat;
     }
 }
