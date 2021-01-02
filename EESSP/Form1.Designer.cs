@@ -32,10 +32,16 @@ namespace EESSP
             this.panelHome = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelPacienti = new System.Windows.Forms.Panel();
+            this.listViewPacienti = new System.Windows.Forms.ListView();
+            this.chNume = new System.Windows.Forms.ColumnHeader();
+            this.chPrenume = new System.Windows.Forms.ColumnHeader();
+            this.chGen = new System.Windows.Forms.ColumnHeader();
+            this.chVarsta = new System.Windows.Forms.ColumnHeader();
+            this.chCNP = new System.Windows.Forms.ColumnHeader();
+            this.chNrFisa = new System.Windows.Forms.ColumnHeader();
             this.buttonExitedPatient = new System.Windows.Forms.Button();
             this.buttonDeathPatient = new System.Windows.Forms.Button();
             this.buttonEditPatient = new System.Windows.Forms.Button();
-            this.listViewPatients = new System.Windows.Forms.ListView();
             this.buttonAddPatient = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.pacientiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,15 +74,60 @@ namespace EESSP
             // 
             // panelPacienti
             // 
+            this.panelPacienti.Controls.Add(this.listViewPacienti);
             this.panelPacienti.Controls.Add(this.buttonExitedPatient);
             this.panelPacienti.Controls.Add(this.buttonDeathPatient);
             this.panelPacienti.Controls.Add(this.buttonEditPatient);
-            this.panelPacienti.Controls.Add(this.listViewPatients);
             this.panelPacienti.Controls.Add(this.buttonAddPatient);
             this.panelPacienti.Location = new System.Drawing.Point(13, 27);
             this.panelPacienti.Name = "panelPacienti";
             this.panelPacienti.Size = new System.Drawing.Size(775, 410);
             this.panelPacienti.TabIndex = 2;
+            // 
+            // listViewPacienti
+            // 
+            this.listViewPacienti.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chNume,
+            this.chPrenume,
+            this.chGen,
+            this.chVarsta,
+            this.chCNP,
+            this.chNrFisa});
+            this.listViewPacienti.GridLines = true;
+            this.listViewPacienti.HideSelection = false;
+            this.listViewPacienti.Location = new System.Drawing.Point(235, 60);
+            this.listViewPacienti.Name = "listViewPacienti";
+            this.listViewPacienti.Size = new System.Drawing.Size(516, 334);
+            this.listViewPacienti.TabIndex = 5;
+            this.listViewPacienti.UseCompatibleStateImageBehavior = false;
+            this.listViewPacienti.View = System.Windows.Forms.View.Details;
+            // 
+            // chNume
+            // 
+            this.chNume.Text = "Nume";
+            // 
+            // chPrenume
+            // 
+            this.chPrenume.Text = "Prenume";
+            // 
+            // chGen
+            // 
+            this.chGen.DisplayIndex = 3;
+            this.chGen.Text = "Gen";
+            // 
+            // chVarsta
+            // 
+            this.chVarsta.DisplayIndex = 2;
+            this.chVarsta.Text = "Varsta";
+            // 
+            // chCNP
+            // 
+            this.chCNP.Text = "CNP";
+            // 
+            // chNrFisa
+            // 
+            this.chNrFisa.Text = "Numar fisa";
+            this.chNrFisa.Width = 100;
             // 
             // buttonExitedPatient
             // 
@@ -104,16 +155,6 @@ namespace EESSP
             this.buttonEditPatient.TabIndex = 2;
             this.buttonEditPatient.Text = "Modificare pacient";
             this.buttonEditPatient.UseVisualStyleBackColor = true;
-            // 
-            // listViewPatients
-            // 
-            this.listViewPatients.GridLines = true;
-            this.listViewPatients.HideSelection = false;
-            this.listViewPatients.Location = new System.Drawing.Point(235, 60);
-            this.listViewPatients.Name = "listViewPatients";
-            this.listViewPatients.Size = new System.Drawing.Size(525, 336);
-            this.listViewPatients.TabIndex = 1;
-            this.listViewPatients.UseCompatibleStateImageBehavior = false;
             // 
             // buttonAddPatient
             // 
@@ -188,10 +229,16 @@ namespace EESSP
         private System.Windows.Forms.ToolStripMenuItem consultatiiMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajutorMenuItem;
         private System.Windows.Forms.Button buttonAddPatient;
-        private System.Windows.Forms.ListView listViewPatients;
         private System.Windows.Forms.Button buttonEditPatient;
         private System.Windows.Forms.Button buttonDeathPatient;
         private System.Windows.Forms.Button buttonExitedPatient;
+        private System.Windows.Forms.ListView listViewPacienti;
+        private System.Windows.Forms.ColumnHeader chNume;
+        private System.Windows.Forms.ColumnHeader chPrenume;
+        private System.Windows.Forms.ColumnHeader chGen;
+        private System.Windows.Forms.ColumnHeader chVarsta;
+        private System.Windows.Forms.ColumnHeader chCNP;
+        private System.Windows.Forms.ColumnHeader chNrFisa;
     }
 }
 

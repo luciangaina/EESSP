@@ -39,5 +39,6 @@ namespace EESSP
             Form2 adaugarePacient = new Form2();
             adaugarePacient.Show();
         }
+
     }
 }
