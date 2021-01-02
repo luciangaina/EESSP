@@ -30,6 +30,8 @@ namespace EESSP
         private void InitializeComponent()
         {
             this.panelAddPatient = new System.Windows.Forms.Panel();
+            this.buttonAdaugaPacient = new System.Windows.Forms.Button();
+            this.checkBoxAsigurat = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
             this.textBoxInaltime = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -58,7 +60,7 @@ namespace EESSP
             this.textBoxTelefon = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxAge = new System.Windows.Forms.TextBox();
+            this.textBoxVarsta = new System.Windows.Forms.TextBox();
             this.datePickerDataNastere = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxPrenume = new System.Windows.Forms.TextBox();
@@ -72,12 +74,12 @@ namespace EESSP
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxAsigurat = new System.Windows.Forms.CheckBox();
             this.panelAddPatient.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAddPatient
             // 
+            this.panelAddPatient.Controls.Add(this.buttonAdaugaPacient);
             this.panelAddPatient.Controls.Add(this.checkBoxAsigurat);
             this.panelAddPatient.Controls.Add(this.label23);
             this.panelAddPatient.Controls.Add(this.textBoxInaltime);
@@ -107,7 +109,7 @@ namespace EESSP
             this.panelAddPatient.Controls.Add(this.textBoxTelefon);
             this.panelAddPatient.Controls.Add(this.label9);
             this.panelAddPatient.Controls.Add(this.label8);
-            this.panelAddPatient.Controls.Add(this.textBoxAge);
+            this.panelAddPatient.Controls.Add(this.textBoxVarsta);
             this.panelAddPatient.Controls.Add(this.datePickerDataNastere);
             this.panelAddPatient.Controls.Add(this.label7);
             this.panelAddPatient.Controls.Add(this.textBoxPrenume);
@@ -126,6 +128,25 @@ namespace EESSP
             this.panelAddPatient.Size = new System.Drawing.Size(675, 426);
             this.panelAddPatient.TabIndex = 2;
             // 
+            // buttonAdaugaPacient
+            // 
+            this.buttonAdaugaPacient.Location = new System.Drawing.Point(551, 385);
+            this.buttonAdaugaPacient.Name = "buttonAdaugaPacient";
+            this.buttonAdaugaPacient.Size = new System.Drawing.Size(76, 23);
+            this.buttonAdaugaPacient.TabIndex = 44;
+            this.buttonAdaugaPacient.Text = "Salveaza";
+            this.buttonAdaugaPacient.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAsigurat
+            // 
+            this.checkBoxAsigurat.AutoSize = true;
+            this.checkBoxAsigurat.Location = new System.Drawing.Point(520, 163);
+            this.checkBoxAsigurat.Name = "checkBoxAsigurat";
+            this.checkBoxAsigurat.Size = new System.Drawing.Size(70, 19);
+            this.checkBoxAsigurat.TabIndex = 43;
+            this.checkBoxAsigurat.Text = "Asigurat";
+            this.checkBoxAsigurat.UseVisualStyleBackColor = true;
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -142,6 +163,7 @@ namespace EESSP
             this.textBoxInaltime.Name = "textBoxInaltime";
             this.textBoxInaltime.Size = new System.Drawing.Size(55, 23);
             this.textBoxInaltime.TabIndex = 41;
+            this.textBoxInaltime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // label22
             // 
@@ -228,6 +250,7 @@ namespace EESSP
             this.textBoxApartament.Name = "textBoxApartament";
             this.textBoxApartament.Size = new System.Drawing.Size(55, 23);
             this.textBoxApartament.TabIndex = 32;
+            this.textBoxApartament.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // label17
             // 
@@ -356,6 +379,7 @@ namespace EESSP
             this.textBoxTelefon.Name = "textBoxTelefon";
             this.textBoxTelefon.Size = new System.Drawing.Size(124, 23);
             this.textBoxTelefon.TabIndex = 16;
+            this.textBoxTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // label9
             // 
@@ -375,13 +399,14 @@ namespace EESSP
             this.label8.TabIndex = 14;
             this.label8.Text = "Varsta:";
             // 
-            // textBoxAge
+            // textBoxVarsta
             // 
-            this.textBoxAge.Location = new System.Drawing.Point(73, 161);
-            this.textBoxAge.MaxLength = 99999;
-            this.textBoxAge.Name = "textBoxAge";
-            this.textBoxAge.Size = new System.Drawing.Size(124, 23);
-            this.textBoxAge.TabIndex = 13;
+            this.textBoxVarsta.Location = new System.Drawing.Point(73, 161);
+            this.textBoxVarsta.MaxLength = 99999;
+            this.textBoxVarsta.Name = "textBoxVarsta";
+            this.textBoxVarsta.Size = new System.Drawing.Size(124, 23);
+            this.textBoxVarsta.TabIndex = 13;
+            this.textBoxVarsta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // datePickerDataNastere
             // 
@@ -449,6 +474,7 @@ namespace EESSP
             this.textBoxNumarFisa.Name = "textBoxNumarFisa";
             this.textBoxNumarFisa.Size = new System.Drawing.Size(124, 23);
             this.textBoxNumarFisa.TabIndex = 5;
+            this.textBoxNumarFisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // textBoxCNP
             // 
@@ -457,6 +483,8 @@ namespace EESSP
             this.textBoxCNP.Name = "textBoxCNP";
             this.textBoxCNP.Size = new System.Drawing.Size(124, 23);
             this.textBoxCNP.TabIndex = 4;
+            this.textBoxCNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
+            this.textBoxCNP.Leave += new System.EventHandler(this.textBoxCNP_Leave);
             // 
             // label4
             // 
@@ -495,16 +523,6 @@ namespace EESSP
             this.label1.TabIndex = 0;
             this.label1.Text = "Adaugare pacient";
             // 
-            // checkBoxAsigurat
-            // 
-            this.checkBoxAsigurat.AutoSize = true;
-            this.checkBoxAsigurat.Location = new System.Drawing.Point(520, 163);
-            this.checkBoxAsigurat.Name = "checkBoxAsigurat";
-            this.checkBoxAsigurat.Size = new System.Drawing.Size(70, 19);
-            this.checkBoxAsigurat.TabIndex = 43;
-            this.checkBoxAsigurat.Text = "Asigurat";
-            this.checkBoxAsigurat.UseVisualStyleBackColor = true;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -538,7 +556,7 @@ namespace EESSP
         private System.Windows.Forms.TextBox textBoxTelefon;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxAge;
+        private System.Windows.Forms.TextBox textBoxVarsta;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNume;
@@ -565,5 +583,6 @@ namespace EESSP
         private System.Windows.Forms.TextBox textBoxApartament;
         private System.Windows.Forms.ComboBox comboBoxRh;
         private System.Windows.Forms.CheckBox checkBoxAsigurat;
+        private System.Windows.Forms.Button buttonAdaugaPacient;
     }
 }
