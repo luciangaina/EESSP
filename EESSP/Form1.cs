@@ -20,18 +20,24 @@ namespace EESSP
             InitializeComponent();
         }
 
-        private async void onLoad(object sender, EventArgs e)
+        private void onLoad(object sender, EventArgs e)
         {
             _dbContext = new ProjectContext();
-
-            var pacienti = await _dbContext.Pacient.ToListAsync();
-
             panelHome.BringToFront();
         }
 
-        private void pacientiMenuItem_onClick(object sender, EventArgs e)
+        private async void pacientiMenuItem_onClick(object sender, EventArgs e)
         {
             panelPacienti.BringToFront();
+            var pacienti = await _dbContext.Pacient.ToListAsync();
+
+            foreach(var pacient in pacienti)
+            {
+                var row = new string[]{ pacient.Nume, pacient.Prenume, pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa };
+                var listItem = new ListViewItem(row);
+                listItem.Tag = pacient;
+                listViewPacienti.Items.Add(listItem);
+            }
         }
 
         private void buttonAddPatient_Click(object sender, EventArgs e)
