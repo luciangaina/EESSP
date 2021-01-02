@@ -136,6 +136,7 @@ namespace EESSP
             this.buttonAdaugaPacient.TabIndex = 44;
             this.buttonAdaugaPacient.Text = "Salveaza";
             this.buttonAdaugaPacient.UseVisualStyleBackColor = true;
+            this.buttonAdaugaPacient.Click += new System.EventHandler(this.buttonAdaugaPacient_Click);
             // 
             // checkBoxAsigurat
             // 

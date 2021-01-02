@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EESSP.Contexts;
+using EESSP.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +12,11 @@ namespace EESSP
 {
     public partial class Form2 : Form
     {
+        private ProjectContext _dbContext;
         public Form2()
         {
             InitializeComponent();
+            _dbContext = new ProjectContext();
         }
 
         private void NumberKeyPress(object sender, KeyPressEventArgs e)
@@ -53,6 +57,37 @@ namespace EESSP
                     varsta--;
                 textBoxVarsta.Text = varsta.ToString();
             }
+        }
+
+        private void buttonAdaugaPacient_Click(object sender, EventArgs e)
+        {
+            var newPacient = new Pacient()
+            {
+                CNP = textBoxCNP.Text,
+                NrFisa = textBoxNumarFisa.Text,
+                Gen = textBoxGen.Text,
+                Nume = textBoxNume.Text,
+                Prenume = textBoxPrenume.Text,
+                DataNastere = datePickerDataNastere.Value,
+                Varsta = int.Parse(textBoxVarsta.Text),
+                Asigurare = checkBoxAsigurat.Checked ? true : false,
+                Telefon = textBoxTelefon.Text,
+                Localitate = textBoxLocalitate.Text,
+                Judet = textBoxJudet.Text,
+                Strada = textBoxStrada.Text,
+                Numar = textBoxNumar.Text,
+                Bloc = textBoxBloc.Text,
+                Scara = textBoxScara.Text,
+                Apartament = int.Parse(textBoxApartament.Text),
+                GrupaSg = string.IsNullOrEmpty(comboBoxGrSanguina.Text) ? "NULL" : comboBoxGrSanguina.Text,
+                Rh = string.IsNullOrEmpty(comboBoxRh.Text) ? "NULL" : comboBoxRh.Text,
+                Greutate = float.Parse(textBoxGreutate.Text),
+                Inaltime = int.Parse(textBoxInaltime.Text),
+                EstePacient = true
+            };
+
+            _dbContext.Pacient.Add(newPacient);
+            _dbContext.SaveChangesAsync();
         }
     }
 }
