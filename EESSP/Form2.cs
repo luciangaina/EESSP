@@ -78,11 +78,12 @@ namespace EESSP
                 Numar = textBoxNumar.Text,
                 Bloc = textBoxBloc.Text,
                 Scara = textBoxScara.Text,
-                Apartament = int.Parse(textBoxApartament.Text),
-                GrupaSg = string.IsNullOrEmpty(comboBoxGrSanguina.Text) ? "NULL" : comboBoxGrSanguina.Text,
-                Rh = string.IsNullOrEmpty(comboBoxRh.Text) ? "NULL" : comboBoxRh.Text,
+                Apartament = textBoxApartament.Text,
+                GrupaSg = comboBoxGrSanguina.Text,
+                Rh = comboBoxRh.Text,
                 Greutate = float.Parse(textBoxGreutate.Text),
                 Inaltime = int.Parse(textBoxInaltime.Text),
+                DataDeces = new DateTime(2999, 01, 01),
                 EstePacient = true
             };
 

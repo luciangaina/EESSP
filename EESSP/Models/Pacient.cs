@@ -23,7 +23,7 @@ namespace EESSP.Models
         public string Numar { get; set; }
         public string Bloc { get; set; }
         public string Scara { get; set; }
-        public int Apartament { get; set; }
+        public string Apartament { get; set; }
         public string GrupaSg { get; set; }
         public string Rh { get; set; }
         public float Greutate { get; set; }
