@@ -93,6 +93,7 @@ namespace EESSP
             this.chVarsta,
             this.chCNP,
             this.chNrFisa});
+            this.listViewPacienti.FullRowSelect = true;
             this.listViewPacienti.GridLines = true;
             this.listViewPacienti.HideSelection = false;
             this.listViewPacienti.Location = new System.Drawing.Point(235, 60);
@@ -105,24 +106,29 @@ namespace EESSP
             // chNume
             // 
             this.chNume.Text = "Nume";
+            this.chNume.Width = 100;
             // 
             // chPrenume
             // 
             this.chPrenume.Text = "Prenume";
+            this.chPrenume.Width = 130;
             // 
             // chGen
             // 
             this.chGen.DisplayIndex = 3;
             this.chGen.Text = "Gen";
+            this.chGen.Width = 40;
             // 
             // chVarsta
             // 
             this.chVarsta.DisplayIndex = 2;
             this.chVarsta.Text = "Varsta";
+            this.chVarsta.Width = 50;
             // 
             // chCNP
             // 
             this.chCNP.Text = "CNP";
+            this.chCNP.Width = 100;
             // 
             // chNrFisa
             // 
@@ -146,6 +152,7 @@ namespace EESSP
             this.buttonDeathPatient.TabIndex = 3;
             this.buttonDeathPatient.Text = "Inregistrare deces";
             this.buttonDeathPatient.UseVisualStyleBackColor = true;
+            this.buttonDeathPatient.Click += new System.EventHandler(this.buttonDeathPatient_Click);
             // 
             // buttonEditPatient
             // 

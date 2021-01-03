@@ -29,7 +29,7 @@ namespace EESSP
         private async void pacientiMenuItem_onClick(object sender, EventArgs e)
         {
             panelPacienti.BringToFront();
-            var pacienti = await _dbContext.Pacient.ToListAsync();
+            var pacienti = await _dbContext.Pacient.OrderBy(pacient => pacient.Nume).ToListAsync();
 
             listViewPacienti.Items.Clear();
             foreach(var pacient in pacienti)
@@ -47,5 +47,23 @@ namespace EESSP
             adaugarePacient.Show();
         }
 
+        private void buttonDeathPatient_Click(object sender, EventArgs e)
+        {
+            var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
+
+            var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
+
+            var textMessageBox = "Doriti sa inregistrati decesul pentru pacientu; " + pacient.Nume + " " + pacient.Prenume + "?";
+            var response = MessageBox.Show(textMessageBox, "", MessageBoxButtons.YesNo);
+
+            if (response == DialogResult.Yes)
+            {
+                pacient.DataDeces = DateTime.Today;
+                _dbContext.SaveChanges();
+                MessageBox.Show("Decesul a fost inregistrat.", "", MessageBoxButtons.OK);
+            }
+            else
+                MessageBox.Show("Decesul nu a fost inregistrat.", "", MessageBoxButtons.OK);
+        }
     }
 }
