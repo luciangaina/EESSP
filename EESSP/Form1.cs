@@ -31,6 +31,7 @@ namespace EESSP
             panelPacienti.BringToFront();
             var pacienti = await _dbContext.Pacient.ToListAsync();
 
+            listViewPacienti.Items.Clear();
             foreach(var pacient in pacienti)
             {
                 var row = new string[]{ pacient.Nume, pacient.Prenume, pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa };
