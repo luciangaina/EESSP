@@ -225,11 +225,10 @@ namespace EESSP
             // 
             this.comboBoxGrSanguina.FormattingEnabled = true;
             this.comboBoxGrSanguina.Items.AddRange(new object[] {
-            "",
-            "0 - I",
-            "A - II",
-            "B - III",
-            "AB - IV"});
+            "0-I",
+            "A-II",
+            "B-III",
+            "AB-IV"});
             this.comboBoxGrSanguina.Location = new System.Drawing.Point(119, 335);
             this.comboBoxGrSanguina.Name = "comboBoxGrSanguina";
             this.comboBoxGrSanguina.Size = new System.Drawing.Size(107, 23);
@@ -376,7 +375,7 @@ namespace EESSP
             // textBoxTelefon
             // 
             this.textBoxTelefon.Location = new System.Drawing.Point(293, 161);
-            this.textBoxTelefon.MaxLength = 99999;
+            this.textBoxTelefon.MaxLength = 10;
             this.textBoxTelefon.Name = "textBoxTelefon";
             this.textBoxTelefon.Size = new System.Drawing.Size(124, 23);
             this.textBoxTelefon.TabIndex = 16;

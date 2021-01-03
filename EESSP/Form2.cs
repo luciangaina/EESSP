@@ -79,16 +79,17 @@ namespace EESSP
                 Bloc = textBoxBloc.Text,
                 Scara = textBoxScara.Text,
                 Apartament = textBoxApartament.Text,
-                GrupaSg = comboBoxGrSanguina.Text,
-                Rh = comboBoxRh.Text,
-                Greutate = float.Parse(textBoxGreutate.Text),
-                Inaltime = int.Parse(textBoxInaltime.Text),
+                GrupaSg = string.IsNullOrEmpty(comboBoxGrSanguina.Text) ? "NULL" : comboBoxGrSanguina.Text,
+                Rh = string.IsNullOrEmpty(comboBoxRh.Text) ? "NULL" : comboBoxRh.Text,
+                Greutate = string.IsNullOrEmpty(textBoxGreutate.Text) ? 0 : float.Parse(textBoxGreutate.Text),
+                Inaltime = string.IsNullOrEmpty(textBoxInaltime.Text) ? 0 : int.Parse(textBoxInaltime.Text),
                 DataDeces = new DateTime(2999, 01, 01),
                 EstePacient = true
             };
 
             _dbContext.Pacient.Add(newPacient);
-            _dbContext.SaveChangesAsync();
+            _dbContext.SaveChanges();
+            MessageBox.Show("Pacientul a fost introdul in sistem.", "", MessageBoxButtons.OK);
         }
     }
 }
