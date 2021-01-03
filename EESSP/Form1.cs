@@ -37,6 +37,8 @@ namespace EESSP
                 var row = new string[]{ pacient.Nume, pacient.Prenume, pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa };
                 var listItem = new ListViewItem(row);
                 listItem.Tag = pacient;
+                if (!pacient.EstePacient)
+                    listItem.ForeColor = Color.Magenta;
                 listViewPacienti.Items.Add(listItem);
             }
         }
@@ -53,7 +55,7 @@ namespace EESSP
 
             var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
 
-            var textMessageBox = "Doriti sa inregistrati decesul pentru pacientu; " + pacient.Nume + " " + pacient.Prenume + "?";
+            var textMessageBox = "Doriti sa inregistrati decesul pentru pacientul " + pacient.Nume + " " + pacient.Prenume + "?";
             var response = MessageBox.Show(textMessageBox, "", MessageBoxButtons.YesNo);
 
             if (response == DialogResult.Yes)
@@ -64,6 +66,25 @@ namespace EESSP
             }
             else
                 MessageBox.Show("Decesul nu a fost inregistrat.", "", MessageBoxButtons.OK);
+        }
+
+        private void buttonExitedPatient_Click(object sender, EventArgs e)
+        {
+            var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
+
+            var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
+
+            var textMessageBox = "Doriti sa inregistrati iesirea pacientului: " + pacient.Nume + " " + pacient.Prenume + "?";
+            var response = MessageBox.Show(textMessageBox, "", MessageBoxButtons.YesNo);
+
+            if (response == DialogResult.Yes)
+            {
+                pacient.EstePacient = false;
+                _dbContext.SaveChanges();
+                MessageBox.Show("Iesirea pacientului a fost inregistrata.", "", MessageBoxButtons.OK);
+            }
+            else
+                MessageBox.Show("Iesirea pacientului nu a fost inregistrata.", "", MessageBoxButtons.OK);
         }
     }
 }

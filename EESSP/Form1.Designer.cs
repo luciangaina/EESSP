@@ -143,6 +143,7 @@ namespace EESSP
             this.buttonExitedPatient.TabIndex = 4;
             this.buttonExitedPatient.Text = "Iesire pacient";
             this.buttonExitedPatient.UseVisualStyleBackColor = true;
+            this.buttonExitedPatient.Click += new System.EventHandler(this.buttonExitedPatient_Click);
             // 
             // buttonDeathPatient
             // 
