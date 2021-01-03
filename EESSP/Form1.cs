@@ -14,7 +14,7 @@ namespace EESSP
 {
     public partial class MainApp : Form
     {
-        private ProjectContext _dbContext;
+        private ProjectContext _dbContext = new ProjectContext();
         public MainApp()
         {
             InitializeComponent();
@@ -22,7 +22,6 @@ namespace EESSP
 
         private void onLoad(object sender, EventArgs e)
         {
-            _dbContext = new ProjectContext();
             panelHome.BringToFront();
         }
 
@@ -32,9 +31,9 @@ namespace EESSP
             var pacienti = await _dbContext.Pacient.OrderBy(pacient => pacient.Nume).ToListAsync();
 
             listViewPacienti.Items.Clear();
-            foreach(var pacient in pacienti)
+            foreach (var pacient in pacienti)
             {
-                var row = new string[]{ pacient.Nume, pacient.Prenume, pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa };
+                var row = new string[] { pacient.Nume, pacient.Prenume, pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa };
                 var listItem = new ListViewItem(row);
                 listItem.Tag = pacient;
                 if (!pacient.EstePacient)
@@ -85,6 +84,12 @@ namespace EESSP
             }
             else
                 MessageBox.Show("Iesirea pacientului nu a fost inregistrata.", "", MessageBoxButtons.OK);
+        }
+
+        private void buttonEditPatient_Click(object sender, EventArgs e)
+        {
+            var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
+            var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
         }
     }
 }

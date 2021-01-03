@@ -93,6 +93,7 @@ namespace EESSP
             this.chVarsta,
             this.chCNP,
             this.chNrFisa});
+            this.listViewPacienti.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listViewPacienti.FullRowSelect = true;
             this.listViewPacienti.GridLines = true;
             this.listViewPacienti.HideSelection = false;
@@ -163,6 +164,7 @@ namespace EESSP
             this.buttonEditPatient.TabIndex = 2;
             this.buttonEditPatient.Text = "Modificare pacient";
             this.buttonEditPatient.UseVisualStyleBackColor = true;
+            this.buttonEditPatient.Click += new System.EventHandler(this.buttonEditPatient_Click);
             // 
             // buttonAddPatient
             // 
