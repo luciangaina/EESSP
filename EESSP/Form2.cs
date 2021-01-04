@@ -13,9 +13,12 @@ namespace EESSP
     public partial class Form2 : Form
     {
         private ProjectContext _dbContext = new ProjectContext();
-        public Form2()
+        private MainApp parentForm;
+
+        public Form2(MainApp parentForm)
         {
             InitializeComponent();
+            this.parentForm = parentForm;
         }
 
         private void NumberKeyPress(object sender, KeyPressEventArgs e)
@@ -90,7 +93,10 @@ namespace EESSP
             _dbContext.SaveChanges();
             var response = MessageBox.Show("Pacientul a fost introdul in sistem.", "", MessageBoxButtons.OK);
             if (response == DialogResult.OK)
+            {
+                parentForm.refreshPatientsList();
                 this.Close();
+            }
         }
     }
 }

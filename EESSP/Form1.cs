@@ -25,12 +25,17 @@ namespace EESSP
             panelHome.BringToFront();
         }
 
-        private async void pacientiMenuItem_onClick(object sender, EventArgs e)
+        private void pacientiMenuItem_onClick(object sender, EventArgs e)
         {
             panelPacienti.BringToFront();
-            var pacienti = await _dbContext.Pacient.OrderBy(pacient => pacient.Nume).ToListAsync();
+            refreshPatientsList();
+        }
 
+        public async void refreshPatientsList()
+        {
             listViewPacienti.Items.Clear();
+
+            var pacienti = await _dbContext.Pacient.OrderBy(pacient => pacient.Nume).ToListAsync();
             foreach (var pacient in pacienti)
             {
                 var row = new string[] { pacient.Nume, pacient.Prenume, pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa };
@@ -44,7 +49,7 @@ namespace EESSP
 
         private void buttonAddPatient_Click(object sender, EventArgs e)
         {
-            Form2 adaugarePacient = new Form2();
+            Form2 adaugarePacient = new Form2(this);
             adaugarePacient.Show();
         }
 
