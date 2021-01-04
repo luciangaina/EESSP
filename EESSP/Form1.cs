@@ -90,6 +90,9 @@ namespace EESSP
         {
             var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
             var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
+
+            Form3 editarePacient = new Form3(pacient);
+            editarePacient.Show();
         }
     }
 }
