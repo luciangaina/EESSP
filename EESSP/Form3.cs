@@ -13,11 +13,13 @@ namespace EESSP
     public partial class Form3 : Form
     {
         private ProjectContext _dbContext = new ProjectContext();
+        private MainApp parentForm;
         private Pacient pacient;
 
-        public Form3(Pacient pacient)
+        public Form3(MainApp parentForm, Pacient pacient)
         {
             InitializeComponent();
+            this.parentForm = parentForm;
             this.pacient = pacient;
         }
 
@@ -76,7 +78,10 @@ namespace EESSP
             _dbContext.SaveChanges();
             var response = MessageBox.Show("Datele pacientului au fost modificate", "", MessageBoxButtons.OK);
             if (response == DialogResult.OK)
+            {
+                parentForm.refreshPatientsList();
                 this.Close();
+            }
         }
     }
 }
