@@ -74,11 +74,13 @@ namespace EESSP
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.panelAddPatient.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAddPatient
             // 
+            this.panelAddPatient.Controls.Add(this.label24);
             this.panelAddPatient.Controls.Add(this.buttonAdaugaPacient);
             this.panelAddPatient.Controls.Add(this.checkBoxAsigurat);
             this.panelAddPatient.Controls.Add(this.label23);
@@ -125,17 +127,19 @@ namespace EESSP
             this.panelAddPatient.Controls.Add(this.label1);
             this.panelAddPatient.Location = new System.Drawing.Point(12, 12);
             this.panelAddPatient.Name = "panelAddPatient";
-            this.panelAddPatient.Size = new System.Drawing.Size(675, 426);
+            this.panelAddPatient.Size = new System.Drawing.Size(675, 446);
             this.panelAddPatient.TabIndex = 2;
             // 
             // buttonAdaugaPacient
             // 
-            this.buttonAdaugaPacient.Location = new System.Drawing.Point(551, 385);
+            this.buttonAdaugaPacient.BackColor = System.Drawing.Color.SpringGreen;
+            this.buttonAdaugaPacient.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonAdaugaPacient.Location = new System.Drawing.Point(520, 370);
             this.buttonAdaugaPacient.Name = "buttonAdaugaPacient";
-            this.buttonAdaugaPacient.Size = new System.Drawing.Size(76, 23);
+            this.buttonAdaugaPacient.Size = new System.Drawing.Size(107, 38);
             this.buttonAdaugaPacient.TabIndex = 44;
             this.buttonAdaugaPacient.Text = "Salveaza";
-            this.buttonAdaugaPacient.UseVisualStyleBackColor = true;
+            this.buttonAdaugaPacient.UseVisualStyleBackColor = false;
             this.buttonAdaugaPacient.Click += new System.EventHandler(this.buttonAdaugaPacient_Click);
             // 
             // checkBoxAsigurat
@@ -169,11 +173,11 @@ namespace EESSP
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(212, 388);
+            this.label22.Location = new System.Drawing.Point(204, 388);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(53, 15);
+            this.label22.Size = new System.Drawing.Size(61, 15);
             this.label22.TabIndex = 40;
-            this.label22.Text = "Inaltime:";
+            this.label22.Text = "Inaltime *:";
             // 
             // label21
             // 
@@ -195,11 +199,11 @@ namespace EESSP
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(20, 388);
+            this.label20.Location = new System.Drawing.Point(16, 388);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(55, 15);
+            this.label20.Size = new System.Drawing.Size(63, 15);
             this.label20.TabIndex = 37;
-            this.label20.Text = "Greutate:";
+            this.label20.Text = "Greutate *:";
             // 
             // comboBoxRh
             // 
@@ -332,11 +336,11 @@ namespace EESSP
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(226, 227);
+            this.label12.Location = new System.Drawing.Point(218, 227);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 15);
+            this.label12.Size = new System.Drawing.Size(69, 15);
             this.label12.TabIndex = 22;
-            this.label12.Text = "Localitate:";
+            this.label12.Text = "Localitate *:";
             // 
             // textBoxLocalitate
             // 
@@ -357,20 +361,20 @@ namespace EESSP
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 227);
+            this.label11.Location = new System.Drawing.Point(21, 227);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 15);
+            this.label11.Size = new System.Drawing.Size(46, 15);
             this.label11.TabIndex = 19;
-            this.label11.Text = "Judet:";
+            this.label11.Text = "Judet *:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(454, 164);
+            this.label10.Location = new System.Drawing.Point(446, 164);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 15);
+            this.label10.Size = new System.Drawing.Size(68, 15);
             this.label10.TabIndex = 18;
-            this.label10.Text = "Asigurare:";
+            this.label10.Text = "Asigurare *:";
             // 
             // textBoxTelefon
             // 
@@ -393,11 +397,11 @@ namespace EESSP
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 164);
+            this.label8.Location = new System.Drawing.Point(18, 164);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 15);
+            this.label8.Size = new System.Drawing.Size(49, 15);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Varsta:";
+            this.label8.Text = "Varsta *:";
             // 
             // textBoxVarsta
             // 
@@ -411,7 +415,7 @@ namespace EESSP
             // datePickerDataNastere
             // 
             this.datePickerDataNastere.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerDataNastere.Location = new System.Drawing.Point(520, 103);
+            this.datePickerDataNastere.Location = new System.Drawing.Point(520, 106);
             this.datePickerDataNastere.Name = "datePickerDataNastere";
             this.datePickerDataNastere.Size = new System.Drawing.Size(124, 23);
             this.datePickerDataNastere.TabIndex = 12;
@@ -419,11 +423,11 @@ namespace EESSP
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(439, 109);
+            this.label7.Location = new System.Drawing.Point(431, 109);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 15);
+            this.label7.Size = new System.Drawing.Size(83, 15);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Data nastere:";
+            this.label7.Text = "Data nastere *:";
             // 
             // textBoxPrenume
             // 
@@ -436,11 +440,11 @@ namespace EESSP
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(229, 109);
+            this.label6.Location = new System.Drawing.Point(221, 109);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.Size = new System.Drawing.Size(66, 15);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Prenume:";
+            this.label6.Text = "Prenume *:";
             // 
             // textBoxNume
             // 
@@ -453,11 +457,11 @@ namespace EESSP
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 109);
+            this.label5.Location = new System.Drawing.Point(16, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 15);
+            this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Nume:";
+            this.label5.Text = "Nume *:";
             // 
             // textBoxGen
             // 
@@ -489,29 +493,29 @@ namespace EESSP
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(483, 55);
+            this.label4.Location = new System.Drawing.Point(475, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 15);
+            this.label4.Size = new System.Drawing.Size(39, 15);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Gen:";
+            this.label4.Text = "Gen *:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 55);
+            this.label3.Location = new System.Drawing.Point(232, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 15);
+            this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nr. fisa:";
+            this.label3.Text = "Nr. fisa *:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 55);
+            this.label2.Location = new System.Drawing.Point(25, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 15);
+            this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "CNP:";
+            this.label2.Text = "CNP *:";
             // 
             // label1
             // 
@@ -523,11 +527,21 @@ namespace EESSP
             this.label1.TabIndex = 0;
             this.label1.Text = "Adaugare pacient";
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.Location = new System.Drawing.Point(398, 427);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(277, 19);
+            this.label24.TabIndex = 45;
+            this.label24.Text = "Campurile marcate cu * sunt obligatorii!";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 450);
+            this.ClientSize = new System.Drawing.Size(699, 470);
             this.Controls.Add(this.panelAddPatient);
             this.Name = "Form2";
             this.Text = "Sanitary Manager";
@@ -584,6 +598,6 @@ namespace EESSP
         private System.Windows.Forms.ComboBox comboBoxRh;
         private System.Windows.Forms.CheckBox checkBoxAsigurat;
         private System.Windows.Forms.Button buttonAdaugaPacient;
-
+        private System.Windows.Forms.Label label24;
     }
 }
