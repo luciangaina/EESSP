@@ -15,12 +15,21 @@ namespace EESSP
         private ProjectContext _dbContext = new ProjectContext();
         private MainApp parentForm;
         private Pacient pacient;
+        private Screen screen;
 
-        public Form3(MainApp parentForm, Pacient pacient)
+        public Form3(MainApp parentForm, Pacient pacient, Screen screen)
         {
             InitializeComponent();
             this.parentForm = parentForm;
             this.pacient = pacient;
+            this.screen = screen;
+        }
+
+        public Form3(Pacient pacient, Screen screen)
+        {
+            InitializeComponent();
+            this.pacient = pacient;
+            this.screen = screen;
         }
 
         public Form3()
@@ -30,7 +39,7 @@ namespace EESSP
 
         private void Form3_onLoad(object sender, EventArgs e)
         {
-            if (pacient != null)
+            if (pacient != null && screen == Screen.ModificaPacient)
             {
                 panelEditPacient.BringToFront();
                 textBoxEditCNP.Text = pacient.CNP;
@@ -53,6 +62,30 @@ namespace EESSP
                 comboBoxEditRh.Text = pacient.Rh;
                 textBoxEditGreutate.Text = pacient.Greutate.ToString();
                 textBoxEditInaltime.Text = pacient.Inaltime.ToString();
+            }
+            if (pacient != null && screen == Screen.FisaPacient)
+            {
+                panelFisaPacient.BringToFront();
+                labelCNP.Text = pacient.CNP;
+                labelNrFisa.Text = pacient.NrFisa;
+                labelGen.Text = pacient.Gen;
+                labelNume.Text = pacient.Nume;
+                labelPrenume.Text = pacient.Prenume;
+                labelDataNastere.Text = pacient.DataNastere.ToString();
+                labelVarsta.Text = pacient.Varsta.ToString();
+                labelAsigurare.Text = pacient.Asigurare ? "Asigurat" : "Neasigurat";
+                labelTelefon.Text = pacient.Telefon;
+                labelLocalitate.Text = pacient.Localitate;
+                labelJudet.Text = pacient.Judet;
+                labelStrada.Text = pacient.Strada;
+                labelNumar.Text = pacient.Numar;
+                labelBloc.Text = pacient.Bloc;
+                labelScara.Text = pacient.Scara;
+                labelApartament.Text = pacient.Apartament;
+                labelGrSang.Text = pacient.GrupaSg;
+                labelRh.Text = pacient.Rh;
+                labelGreutate.Text = pacient.Greutate.ToString();
+                labelInaltime.Text = pacient.Inaltime.ToString();
             }
         }
 
