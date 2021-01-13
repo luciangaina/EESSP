@@ -29,6 +29,7 @@ namespace EESSP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelHome = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelPacienti = new System.Windows.Forms.Panel();
@@ -47,6 +48,7 @@ namespace EESSP
             this.pacientiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultatiiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajutorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelHome.SuspendLayout();
             this.panelPacienti.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -101,6 +103,7 @@ namespace EESSP
             this.listViewPacienti.Name = "listViewPacienti";
             this.listViewPacienti.Size = new System.Drawing.Size(516, 334);
             this.listViewPacienti.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.listViewPacienti, "Lista pacientilor");
             this.listViewPacienti.UseCompatibleStateImageBehavior = false;
             this.listViewPacienti.View = System.Windows.Forms.View.Details;
             // 
@@ -143,6 +146,7 @@ namespace EESSP
             this.buttonExitedPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonExitedPatient.TabIndex = 4;
             this.buttonExitedPatient.Text = "Iesire pacient";
+            this.toolTip1.SetToolTip(this.buttonExitedPatient, "Inregistrarea iesirii unui pacient din lista dumneavoastra");
             this.buttonExitedPatient.UseVisualStyleBackColor = true;
             this.buttonExitedPatient.Click += new System.EventHandler(this.buttonExitedPatient_Click);
             // 
@@ -153,6 +157,7 @@ namespace EESSP
             this.buttonDeathPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonDeathPatient.TabIndex = 3;
             this.buttonDeathPatient.Text = "Inregistrare deces";
+            this.toolTip1.SetToolTip(this.buttonDeathPatient, "Inregistrare decesului pacientului (selectare pacient)");
             this.buttonDeathPatient.UseVisualStyleBackColor = true;
             this.buttonDeathPatient.Click += new System.EventHandler(this.buttonDeathPatient_Click);
             // 
@@ -163,6 +168,7 @@ namespace EESSP
             this.buttonEditPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonEditPatient.TabIndex = 2;
             this.buttonEditPatient.Text = "Modificare pacient";
+            this.toolTip1.SetToolTip(this.buttonEditPatient, "Modificarea datelor pacientului (selectati pacientul)");
             this.buttonEditPatient.UseVisualStyleBackColor = true;
             this.buttonEditPatient.Click += new System.EventHandler(this.buttonEditPatient_Click);
             // 
@@ -173,6 +179,7 @@ namespace EESSP
             this.buttonAddPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonAddPatient.TabIndex = 0;
             this.buttonAddPatient.Text = "Adaugare pacient";
+            this.toolTip1.SetToolTip(this.buttonAddPatient, "Adaugarea unui nou pacient in sistem");
             this.buttonAddPatient.UseVisualStyleBackColor = true;
             this.buttonAddPatient.Click += new System.EventHandler(this.buttonAddPatient_Click);
             // 
@@ -249,6 +256,7 @@ namespace EESSP
         private System.Windows.Forms.ColumnHeader chVarsta;
         private System.Windows.Forms.ColumnHeader chCNP;
         private System.Windows.Forms.ColumnHeader chNrFisa;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

@@ -23,6 +23,11 @@ namespace EESSP
             this.pacient = pacient;
         }
 
+        public Form3()
+        {
+            InitializeComponent();
+        }
+
         private void Form3_onLoad(object sender, EventArgs e)
         {
             if (pacient != null)
