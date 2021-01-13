@@ -12,6 +12,11 @@ using System.Windows.Forms;
 
 namespace EESSP
 {
+    public enum screen
+    {
+        ModificaPacient,
+        FisaPacient
+    }
     public partial class MainApp : Form
     {
         private ProjectContext _dbContext = new ProjectContext();
