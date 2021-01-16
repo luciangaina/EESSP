@@ -31,6 +31,25 @@ namespace EESSP
         {
             this.panelEditPacient = new System.Windows.Forms.Panel();
             this.panelFisaPacient = new System.Windows.Forms.Panel();
+            this.labelGreutate = new System.Windows.Forms.Label();
+            this.labelInaltime = new System.Windows.Forms.Label();
+            this.labelRh = new System.Windows.Forms.Label();
+            this.labelGrSang = new System.Windows.Forms.Label();
+            this.labelApartament = new System.Windows.Forms.Label();
+            this.labelScara = new System.Windows.Forms.Label();
+            this.labelBloc = new System.Windows.Forms.Label();
+            this.labelNumar = new System.Windows.Forms.Label();
+            this.labelStrada = new System.Windows.Forms.Label();
+            this.labelLocalitate = new System.Windows.Forms.Label();
+            this.labelJudet = new System.Windows.Forms.Label();
+            this.labelAsigurare = new System.Windows.Forms.Label();
+            this.labelTelefon = new System.Windows.Forms.Label();
+            this.labelVarsta = new System.Windows.Forms.Label();
+            this.labelDataNastere = new System.Windows.Forms.Label();
+            this.labelPrenume = new System.Windows.Forms.Label();
+            this.labelNume = new System.Windows.Forms.Label();
+            this.labelGender = new System.Windows.Forms.Label();
+            this.labelNrFisa = new System.Windows.Forms.Label();
             this.labelCNP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,32 +118,12 @@ namespace EESSP
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.labelNrFisa = new System.Windows.Forms.Label();
-            this.labelGender = new System.Windows.Forms.Label();
-            this.labelNume = new System.Windows.Forms.Label();
-            this.labelPrenume = new System.Windows.Forms.Label();
-            this.labelDataNastere = new System.Windows.Forms.Label();
-            this.labelVarsta = new System.Windows.Forms.Label();
-            this.labelTelefon = new System.Windows.Forms.Label();
-            this.labelAsigurare = new System.Windows.Forms.Label();
-            this.labelJudet = new System.Windows.Forms.Label();
-            this.labelLocalitate = new System.Windows.Forms.Label();
-            this.labelStrada = new System.Windows.Forms.Label();
-            this.labelNumar = new System.Windows.Forms.Label();
-            this.labelBloc = new System.Windows.Forms.Label();
-            this.labelScara = new System.Windows.Forms.Label();
-            this.labelApartament = new System.Windows.Forms.Label();
-            this.labelGrSang = new System.Windows.Forms.Label();
-            this.labelRh = new System.Windows.Forms.Label();
-            this.labelInaltime = new System.Windows.Forms.Label();
-            this.labelGreutate = new System.Windows.Forms.Label();
             this.panelEditPacient.SuspendLayout();
             this.panelFisaPacient.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEditPacient
             // 
-            this.panelEditPacient.Controls.Add(this.panelFisaPacient);
             this.panelEditPacient.Controls.Add(this.buttonSalveazaModificari);
             this.panelEditPacient.Controls.Add(this.checkBoxEdit);
             this.panelEditPacient.Controls.Add(this.label24);
@@ -219,10 +218,200 @@ namespace EESSP
             this.panelFisaPacient.Controls.Add(this.label21);
             this.panelFisaPacient.Controls.Add(this.label22);
             this.panelFisaPacient.Controls.Add(this.label23);
-            this.panelFisaPacient.Location = new System.Drawing.Point(0, 0);
+            this.panelFisaPacient.Location = new System.Drawing.Point(12, 12);
             this.panelFisaPacient.Name = "panelFisaPacient";
             this.panelFisaPacient.Size = new System.Drawing.Size(675, 426);
             this.panelFisaPacient.TabIndex = 47;
+            // 
+            // labelGreutate
+            // 
+            this.labelGreutate.AutoSize = true;
+            this.labelGreutate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGreutate.Location = new System.Drawing.Point(81, 388);
+            this.labelGreutate.Name = "labelGreutate";
+            this.labelGreutate.Size = new System.Drawing.Size(58, 15);
+            this.labelGreutate.TabIndex = 63;
+            this.labelGreutate.Text = "Greutate";
+            // 
+            // labelInaltime
+            // 
+            this.labelInaltime.AutoSize = true;
+            this.labelInaltime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelInaltime.Location = new System.Drawing.Point(271, 388);
+            this.labelInaltime.Name = "labelInaltime";
+            this.labelInaltime.Size = new System.Drawing.Size(53, 15);
+            this.labelInaltime.TabIndex = 62;
+            this.labelInaltime.Text = "Inaltime";
+            // 
+            // labelRh
+            // 
+            this.labelRh.AutoSize = true;
+            this.labelRh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelRh.Location = new System.Drawing.Point(287, 338);
+            this.labelRh.Name = "labelRh";
+            this.labelRh.Size = new System.Drawing.Size(22, 15);
+            this.labelRh.TabIndex = 61;
+            this.labelRh.Text = "Rh";
+            // 
+            // labelGrSang
+            // 
+            this.labelGrSang.AutoSize = true;
+            this.labelGrSang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGrSang.Location = new System.Drawing.Point(119, 338);
+            this.labelGrSang.Name = "labelGrSang";
+            this.labelGrSang.Size = new System.Drawing.Size(71, 15);
+            this.labelGrSang.TabIndex = 60;
+            this.labelGrSang.Text = "GrSanguina";
+            // 
+            // labelApartament
+            // 
+            this.labelApartament.AutoSize = true;
+            this.labelApartament.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelApartament.Location = new System.Drawing.Point(562, 284);
+            this.labelApartament.Name = "labelApartament";
+            this.labelApartament.Size = new System.Drawing.Size(74, 15);
+            this.labelApartament.TabIndex = 59;
+            this.labelApartament.Text = "Apartament";
+            // 
+            // labelScara
+            // 
+            this.labelScara.AutoSize = true;
+            this.labelScara.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelScara.Location = new System.Drawing.Point(379, 284);
+            this.labelScara.Name = "labelScara";
+            this.labelScara.Size = new System.Drawing.Size(37, 15);
+            this.labelScara.TabIndex = 58;
+            this.labelScara.Text = "Scara";
+            // 
+            // labelBloc
+            // 
+            this.labelBloc.AutoSize = true;
+            this.labelBloc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelBloc.Location = new System.Drawing.Point(226, 284);
+            this.labelBloc.Name = "labelBloc";
+            this.labelBloc.Size = new System.Drawing.Size(31, 15);
+            this.labelBloc.TabIndex = 57;
+            this.labelBloc.Text = "Bloc";
+            // 
+            // labelNumar
+            // 
+            this.labelNumar.AutoSize = true;
+            this.labelNumar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNumar.Location = new System.Drawing.Point(73, 284);
+            this.labelNumar.Name = "labelNumar";
+            this.labelNumar.Size = new System.Drawing.Size(45, 15);
+            this.labelNumar.TabIndex = 56;
+            this.labelNumar.Text = "Numar";
+            // 
+            // labelStrada
+            // 
+            this.labelStrada.AutoSize = true;
+            this.labelStrada.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelStrada.Location = new System.Drawing.Point(520, 227);
+            this.labelStrada.Name = "labelStrada";
+            this.labelStrada.Size = new System.Drawing.Size(43, 15);
+            this.labelStrada.TabIndex = 55;
+            this.labelStrada.Text = "Strada";
+            // 
+            // labelLocalitate
+            // 
+            this.labelLocalitate.AutoSize = true;
+            this.labelLocalitate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelLocalitate.Location = new System.Drawing.Point(293, 227);
+            this.labelLocalitate.Name = "labelLocalitate";
+            this.labelLocalitate.Size = new System.Drawing.Size(61, 15);
+            this.labelLocalitate.TabIndex = 54;
+            this.labelLocalitate.Text = "Localitate";
+            // 
+            // labelJudet
+            // 
+            this.labelJudet.AutoSize = true;
+            this.labelJudet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelJudet.Location = new System.Drawing.Point(73, 227);
+            this.labelJudet.Name = "labelJudet";
+            this.labelJudet.Size = new System.Drawing.Size(38, 15);
+            this.labelJudet.TabIndex = 53;
+            this.labelJudet.Text = "Judet";
+            // 
+            // labelAsigurare
+            // 
+            this.labelAsigurare.AutoSize = true;
+            this.labelAsigurare.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelAsigurare.Location = new System.Drawing.Point(520, 164);
+            this.labelAsigurare.Name = "labelAsigurare";
+            this.labelAsigurare.Size = new System.Drawing.Size(60, 15);
+            this.labelAsigurare.TabIndex = 52;
+            this.labelAsigurare.Text = "Asigurare";
+            // 
+            // labelTelefon
+            // 
+            this.labelTelefon.AutoSize = true;
+            this.labelTelefon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTelefon.Location = new System.Drawing.Point(293, 164);
+            this.labelTelefon.Name = "labelTelefon";
+            this.labelTelefon.Size = new System.Drawing.Size(49, 15);
+            this.labelTelefon.TabIndex = 49;
+            this.labelTelefon.Text = "Telefon";
+            // 
+            // labelVarsta
+            // 
+            this.labelVarsta.AutoSize = true;
+            this.labelVarsta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelVarsta.Location = new System.Drawing.Point(73, 164);
+            this.labelVarsta.Name = "labelVarsta";
+            this.labelVarsta.Size = new System.Drawing.Size(41, 15);
+            this.labelVarsta.TabIndex = 51;
+            this.labelVarsta.Text = "Varsta";
+            // 
+            // labelDataNastere
+            // 
+            this.labelDataNastere.AutoSize = true;
+            this.labelDataNastere.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDataNastere.Location = new System.Drawing.Point(520, 109);
+            this.labelDataNastere.Name = "labelDataNastere";
+            this.labelDataNastere.Size = new System.Drawing.Size(77, 15);
+            this.labelDataNastere.TabIndex = 50;
+            this.labelDataNastere.Text = "DataNastere";
+            // 
+            // labelPrenume
+            // 
+            this.labelPrenume.AutoSize = true;
+            this.labelPrenume.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPrenume.Location = new System.Drawing.Point(293, 109);
+            this.labelPrenume.Name = "labelPrenume";
+            this.labelPrenume.Size = new System.Drawing.Size(58, 15);
+            this.labelPrenume.TabIndex = 49;
+            this.labelPrenume.Text = "Prenume";
+            // 
+            // labelNume
+            // 
+            this.labelNume.AutoSize = true;
+            this.labelNume.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNume.Location = new System.Drawing.Point(73, 109);
+            this.labelNume.Name = "labelNume";
+            this.labelNume.Size = new System.Drawing.Size(41, 15);
+            this.labelNume.TabIndex = 48;
+            this.labelNume.Text = "Nume";
+            // 
+            // labelGender
+            // 
+            this.labelGender.AutoSize = true;
+            this.labelGender.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGender.Location = new System.Drawing.Point(520, 55);
+            this.labelGender.Name = "labelGender";
+            this.labelGender.Size = new System.Drawing.Size(30, 15);
+            this.labelGender.TabIndex = 47;
+            this.labelGender.Text = "Gen";
+            // 
+            // labelNrFisa
+            // 
+            this.labelNrFisa.AutoSize = true;
+            this.labelNrFisa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelNrFisa.Location = new System.Drawing.Point(293, 55);
+            this.labelNrFisa.Name = "labelNrFisa";
+            this.labelNrFisa.Size = new System.Drawing.Size(41, 15);
+            this.labelNrFisa.TabIndex = 46;
+            this.labelNrFisa.Text = "NrFisa";
             // 
             // labelCNP
             // 
@@ -830,202 +1019,13 @@ namespace EESSP
             this.label46.TabIndex = 0;
             this.label46.Text = "Modificare pacient";
             // 
-            // labelNrFisa
-            // 
-            this.labelNrFisa.AutoSize = true;
-            this.labelNrFisa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelNrFisa.Location = new System.Drawing.Point(293, 55);
-            this.labelNrFisa.Name = "labelNrFisa";
-            this.labelNrFisa.Size = new System.Drawing.Size(41, 15);
-            this.labelNrFisa.TabIndex = 46;
-            this.labelNrFisa.Text = "NrFisa";
-            // 
-            // labelGender
-            // 
-            this.labelGender.AutoSize = true;
-            this.labelGender.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelGender.Location = new System.Drawing.Point(520, 55);
-            this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(30, 15);
-            this.labelGender.TabIndex = 47;
-            this.labelGender.Text = "Gen";
-            // 
-            // labelNume
-            // 
-            this.labelNume.AutoSize = true;
-            this.labelNume.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelNume.Location = new System.Drawing.Point(73, 109);
-            this.labelNume.Name = "labelNume";
-            this.labelNume.Size = new System.Drawing.Size(41, 15);
-            this.labelNume.TabIndex = 48;
-            this.labelNume.Text = "Nume";
-            // 
-            // labelPrenume
-            // 
-            this.labelPrenume.AutoSize = true;
-            this.labelPrenume.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelPrenume.Location = new System.Drawing.Point(293, 109);
-            this.labelPrenume.Name = "labelPrenume";
-            this.labelPrenume.Size = new System.Drawing.Size(58, 15);
-            this.labelPrenume.TabIndex = 49;
-            this.labelPrenume.Text = "Prenume";
-            // 
-            // labelDataNastere
-            // 
-            this.labelDataNastere.AutoSize = true;
-            this.labelDataNastere.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelDataNastere.Location = new System.Drawing.Point(520, 109);
-            this.labelDataNastere.Name = "labelDataNastere";
-            this.labelDataNastere.Size = new System.Drawing.Size(77, 15);
-            this.labelDataNastere.TabIndex = 50;
-            this.labelDataNastere.Text = "DataNastere";
-            // 
-            // labelVarsta
-            // 
-            this.labelVarsta.AutoSize = true;
-            this.labelVarsta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelVarsta.Location = new System.Drawing.Point(73, 164);
-            this.labelVarsta.Name = "labelVarsta";
-            this.labelVarsta.Size = new System.Drawing.Size(41, 15);
-            this.labelVarsta.TabIndex = 51;
-            this.labelVarsta.Text = "Varsta";
-            // 
-            // labelTelefon
-            // 
-            this.labelTelefon.AutoSize = true;
-            this.labelTelefon.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTelefon.Location = new System.Drawing.Point(293, 164);
-            this.labelTelefon.Name = "labelTelefon";
-            this.labelTelefon.Size = new System.Drawing.Size(49, 15);
-            this.labelTelefon.TabIndex = 49;
-            this.labelTelefon.Text = "Telefon";
-            // 
-            // labelAsigurare
-            // 
-            this.labelAsigurare.AutoSize = true;
-            this.labelAsigurare.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelAsigurare.Location = new System.Drawing.Point(520, 164);
-            this.labelAsigurare.Name = "labelAsigurare";
-            this.labelAsigurare.Size = new System.Drawing.Size(60, 15);
-            this.labelAsigurare.TabIndex = 52;
-            this.labelAsigurare.Text = "Asigurare";
-            // 
-            // labelJudet
-            // 
-            this.labelJudet.AutoSize = true;
-            this.labelJudet.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelJudet.Location = new System.Drawing.Point(73, 227);
-            this.labelJudet.Name = "labelJudet";
-            this.labelJudet.Size = new System.Drawing.Size(38, 15);
-            this.labelJudet.TabIndex = 53;
-            this.labelJudet.Text = "Judet";
-            // 
-            // labelLocalitate
-            // 
-            this.labelLocalitate.AutoSize = true;
-            this.labelLocalitate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelLocalitate.Location = new System.Drawing.Point(293, 227);
-            this.labelLocalitate.Name = "labelLocalitate";
-            this.labelLocalitate.Size = new System.Drawing.Size(61, 15);
-            this.labelLocalitate.TabIndex = 54;
-            this.labelLocalitate.Text = "Localitate";
-            // 
-            // labelStrada
-            // 
-            this.labelStrada.AutoSize = true;
-            this.labelStrada.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelStrada.Location = new System.Drawing.Point(520, 227);
-            this.labelStrada.Name = "labelStrada";
-            this.labelStrada.Size = new System.Drawing.Size(43, 15);
-            this.labelStrada.TabIndex = 55;
-            this.labelStrada.Text = "Strada";
-            // 
-            // labelNumar
-            // 
-            this.labelNumar.AutoSize = true;
-            this.labelNumar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelNumar.Location = new System.Drawing.Point(73, 284);
-            this.labelNumar.Name = "labelNumar";
-            this.labelNumar.Size = new System.Drawing.Size(45, 15);
-            this.labelNumar.TabIndex = 56;
-            this.labelNumar.Text = "Numar";
-            // 
-            // labelBloc
-            // 
-            this.labelBloc.AutoSize = true;
-            this.labelBloc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelBloc.Location = new System.Drawing.Point(226, 284);
-            this.labelBloc.Name = "labelBloc";
-            this.labelBloc.Size = new System.Drawing.Size(31, 15);
-            this.labelBloc.TabIndex = 57;
-            this.labelBloc.Text = "Bloc";
-            // 
-            // labelScara
-            // 
-            this.labelScara.AutoSize = true;
-            this.labelScara.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelScara.Location = new System.Drawing.Point(379, 284);
-            this.labelScara.Name = "labelScara";
-            this.labelScara.Size = new System.Drawing.Size(37, 15);
-            this.labelScara.TabIndex = 58;
-            this.labelScara.Text = "Scara";
-            // 
-            // labelApartament
-            // 
-            this.labelApartament.AutoSize = true;
-            this.labelApartament.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelApartament.Location = new System.Drawing.Point(562, 284);
-            this.labelApartament.Name = "labelApartament";
-            this.labelApartament.Size = new System.Drawing.Size(74, 15);
-            this.labelApartament.TabIndex = 59;
-            this.labelApartament.Text = "Apartament";
-            // 
-            // labelGrSang
-            // 
-            this.labelGrSang.AutoSize = true;
-            this.labelGrSang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelGrSang.Location = new System.Drawing.Point(119, 338);
-            this.labelGrSang.Name = "labelGrSang";
-            this.labelGrSang.Size = new System.Drawing.Size(71, 15);
-            this.labelGrSang.TabIndex = 60;
-            this.labelGrSang.Text = "GrSanguina";
-            // 
-            // labelRh
-            // 
-            this.labelRh.AutoSize = true;
-            this.labelRh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelRh.Location = new System.Drawing.Point(287, 338);
-            this.labelRh.Name = "labelRh";
-            this.labelRh.Size = new System.Drawing.Size(22, 15);
-            this.labelRh.TabIndex = 61;
-            this.labelRh.Text = "Rh";
-            // 
-            // labelInaltime
-            // 
-            this.labelInaltime.AutoSize = true;
-            this.labelInaltime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelInaltime.Location = new System.Drawing.Point(271, 388);
-            this.labelInaltime.Name = "labelInaltime";
-            this.labelInaltime.Size = new System.Drawing.Size(53, 15);
-            this.labelInaltime.TabIndex = 62;
-            this.labelInaltime.Text = "Inaltime";
-            // 
-            // labelGreutate
-            // 
-            this.labelGreutate.AutoSize = true;
-            this.labelGreutate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelGreutate.Location = new System.Drawing.Point(81, 388);
-            this.labelGreutate.Name = "labelGreutate";
-            this.labelGreutate.Size = new System.Drawing.Size(58, 15);
-            this.labelGreutate.TabIndex = 63;
-            this.labelGreutate.Text = "Greutate";
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 450);
             this.Controls.Add(this.panelEditPacient);
+            this.Controls.Add(this.panelFisaPacient);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_onLoad);

@@ -99,9 +99,9 @@ namespace EESSP
             this.listViewPacienti.FullRowSelect = true;
             this.listViewPacienti.GridLines = true;
             this.listViewPacienti.HideSelection = false;
-            this.listViewPacienti.Location = new System.Drawing.Point(235, 60);
+            this.listViewPacienti.Location = new System.Drawing.Point(227, 60);
             this.listViewPacienti.Name = "listViewPacienti";
-            this.listViewPacienti.Size = new System.Drawing.Size(516, 334);
+            this.listViewPacienti.Size = new System.Drawing.Size(524, 334);
             this.listViewPacienti.TabIndex = 5;
             this.toolTip1.SetToolTip(this.listViewPacienti, "Lista pacientilor");
             this.listViewPacienti.UseCompatibleStateImageBehavior = false;

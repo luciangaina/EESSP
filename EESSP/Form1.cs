@@ -91,6 +91,7 @@ namespace EESSP
                 pacient.EstePacient = false;
                 _dbContext.SaveChanges();
                 MessageBox.Show("Iesirea pacientului a fost inregistrata.", "", MessageBoxButtons.OK);
+                refreshPatientsList();
             }
             else
                 MessageBox.Show("Iesirea pacientului nu a fost inregistrata.", "", MessageBoxButtons.OK);
