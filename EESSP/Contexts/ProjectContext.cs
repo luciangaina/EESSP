@@ -21,7 +21,7 @@ namespace EESSP.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-21H10T6\\SQLEXPRESS;Database=EESSP;Trusted_Connection=true");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-SR5A320\\SQLEXPRESS;Database=EESSP;Trusted_Connection=true");
             }
         }
 
