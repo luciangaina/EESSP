@@ -99,11 +99,18 @@ namespace EESSP
 
         private void buttonEditPatient_Click(object sender, EventArgs e)
         {
-            var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
-            var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
+            if (listViewPacienti.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Pacientul nu a fost selectat!", "Eroare", MessageBoxButtons.OK);
+            }
+            else
+            {
+                var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
+                var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
 
-            Form3 editarePacient = new Form3(this, pacient, Screen.ModificaPacient);
-            editarePacient.Show();
+                Form3 editarePacient = new Form3(this, pacient, Screen.ModificaPacient);
+                editarePacient.Show();
+            }
         }
     }
 }

@@ -43,23 +43,23 @@ namespace EESSP
             {
                 panelEditPacient.BringToFront();
                 textBoxEditCNP.Text = pacient.CNP;
-                textBoxEditNrFisa.Text = pacient.NrFisa;
-                textBoxEditGen.Text = pacient.Gen;
-                textBoxEditNume.Text = pacient.Nume;
-                textBoxEditPrenume.Text = pacient.Prenume;
+                textBoxEditNrFisa.Text = pacient.NrFisa.Trim();
+                textBoxEditGen.Text = pacient.Gen.Trim();
+                textBoxEditNume.Text = pacient.Nume.Trim();
+                textBoxEditPrenume.Text = pacient.Prenume.Trim();
                 dateTimePickerEdit.Value = pacient.DataNastere;
-                textBoxEditVarsta.Text = pacient.Varsta.ToString();
+                textBoxEditVarsta.Text = pacient.Varsta.ToString().Trim();
                 checkBoxEdit.Checked = pacient.Asigurare;
-                textBoxEditTelefon.Text = pacient.Telefon;
-                textBoxEditLocalitate.Text = pacient.Localitate;
-                textBoxEditJudet.Text = pacient.Judet;
-                textBoxEditStrada.Text = pacient.Strada;
-                textBoxEditNumar.Text = pacient.Numar;
-                textBoxEditBloc.Text = pacient.Bloc;
+                textBoxEditTelefon.Text = pacient.Telefon.Trim();
+                textBoxEditLocalitate.Text = pacient.Localitate.Trim();
+                textBoxEditJudet.Text = pacient.Judet.Trim();
+                textBoxEditStrada.Text = pacient.Strada.Trim();
+                textBoxEditNumar.Text = pacient.Numar.Trim();
+                textBoxEditBloc.Text = pacient.Bloc.Trim();
                 textBoxEditScara.Text = pacient.Scara;
-                textBoxEditApartament.Text = pacient.Apartament;
-                comboBoxEditGrupaSg.Text = pacient.GrupaSg;
-                comboBoxEditRh.Text = pacient.Rh;
+                textBoxEditApartament.Text = pacient.Apartament.Trim();
+                comboBoxEditGrupaSg.Text = pacient.GrupaSg.Trim();
+                comboBoxEditRh.Text = pacient.Rh.Trim();
                 textBoxEditGreutate.Text = pacient.Greutate.ToString();
                 textBoxEditInaltime.Text = pacient.Inaltime.ToString();
             }
