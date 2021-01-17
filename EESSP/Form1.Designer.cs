@@ -49,9 +49,22 @@ namespace EESSP
             this.consultatiiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajutorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panelConsultatii = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panelHome.SuspendLayout();
             this.panelPacienti.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.panelConsultatii.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHome
@@ -207,6 +220,7 @@ namespace EESSP
             this.consultatiiMenuItem.Name = "consultatiiMenuItem";
             this.consultatiiMenuItem.Size = new System.Drawing.Size(76, 20);
             this.consultatiiMenuItem.Text = "&Consultatii";
+            this.consultatiiMenuItem.Click += new System.EventHandler(this.consultatiiMenuItem_onClick);
             // 
             // ajutorMenuItem
             // 
@@ -214,11 +228,117 @@ namespace EESSP
             this.ajutorMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ajutorMenuItem.Text = "&Ajutor";
             // 
+            // panelConsultatii
+            // 
+            this.panelConsultatii.Controls.Add(this.listView1);
+            this.panelConsultatii.Controls.Add(this.button1);
+            this.panelConsultatii.Controls.Add(this.button2);
+            this.panelConsultatii.Controls.Add(this.button3);
+            this.panelConsultatii.Controls.Add(this.button4);
+            this.panelConsultatii.Location = new System.Drawing.Point(13, 27);
+            this.panelConsultatii.Name = "panelConsultatii";
+            this.panelConsultatii.Size = new System.Drawing.Size(775, 410);
+            this.panelConsultatii.TabIndex = 6;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(227, 60);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(524, 334);
+            this.listView1.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.listView1, "Lista pacientilor");
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nume";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Prenume";
+            this.columnHeader2.Width = 130;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.DisplayIndex = 3;
+            this.columnHeader3.Text = "Gen";
+            this.columnHeader3.Width = 40;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.DisplayIndex = 2;
+            this.columnHeader4.Text = "Varsta";
+            this.columnHeader4.Width = 50;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "CNP";
+            this.columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Numar fisa";
+            this.columnHeader6.Width = 100;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 270);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Iesire pacient";
+            this.toolTip1.SetToolTip(this.button1, "Inregistrarea iesirii unui pacient din lista dumneavoastra");
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(19, 204);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Inregistrare deces";
+            this.toolTip1.SetToolTip(this.button2, "Inregistrare decesului pacientului (selectare pacient)");
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(19, 134);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(119, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Modificare pacient";
+            this.toolTip1.SetToolTip(this.button3, "Modificarea datelor pacientului (selectati pacientul)");
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(19, 60);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Adaugare consultatie";
+            this.toolTip1.SetToolTip(this.button4, "Adaugarea unui nou pacient in sistem");
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelConsultatii);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.panelPacienti);
             this.Controls.Add(this.panelHome);
@@ -231,6 +351,7 @@ namespace EESSP
             this.panelPacienti.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.panelConsultatii.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,6 +378,18 @@ namespace EESSP
         private System.Windows.Forms.ColumnHeader chCNP;
         private System.Windows.Forms.ColumnHeader chNrFisa;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panelConsultatii;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

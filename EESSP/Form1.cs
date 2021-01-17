@@ -112,5 +112,10 @@ namespace EESSP
                 editarePacient.Show();
             }
         }
+
+        private void consultatiiMenuItem_onClick(object sender, EventArgs e)
+        {
+            panelConsultatii.BringToFront();
+        }
     }
 }
