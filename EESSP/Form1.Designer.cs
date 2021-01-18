@@ -49,18 +49,14 @@ namespace EESSP
             this.consultatiiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajutorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panelConsultatii = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonStergeConsultatie = new System.Windows.Forms.Button();
+            this.buttonModificaConsultatie = new System.Windows.Forms.Button();
+            this.buttonAdaugaConsultatie = new System.Windows.Forms.Button();
+            this.panelConsultatii = new System.Windows.Forms.Panel();
             this.panelHome.SuspendLayout();
             this.panelPacienti.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -228,34 +224,19 @@ namespace EESSP
             this.ajutorMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ajutorMenuItem.Text = "&Ajutor";
             // 
-            // panelConsultatii
-            // 
-            this.panelConsultatii.Controls.Add(this.listView1);
-            this.panelConsultatii.Controls.Add(this.button1);
-            this.panelConsultatii.Controls.Add(this.button2);
-            this.panelConsultatii.Controls.Add(this.button3);
-            this.panelConsultatii.Controls.Add(this.button4);
-            this.panelConsultatii.Location = new System.Drawing.Point(13, 27);
-            this.panelConsultatii.Name = "panelConsultatii";
-            this.panelConsultatii.Size = new System.Drawing.Size(775, 410);
-            this.panelConsultatii.TabIndex = 6;
-            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader3});
             this.listView1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(227, 60);
+            this.listView1.Location = new System.Drawing.Point(304, 60);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(524, 334);
+            this.listView1.Size = new System.Drawing.Size(447, 334);
             this.listView1.TabIndex = 5;
             this.toolTip1.SetToolTip(this.listView1, "Lista pacientilor");
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -263,83 +244,67 @@ namespace EESSP
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Nume";
-            this.columnHeader1.Width = 100;
+            this.columnHeader1.Text = "Data consultatie";
+            this.columnHeader1.Width = 120;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Prenume";
-            this.columnHeader2.Width = 130;
+            this.columnHeader2.Text = "Ora";
+            this.columnHeader2.Width = 50;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.DisplayIndex = 3;
-            this.columnHeader3.Text = "Gen";
-            this.columnHeader3.Width = 40;
+            this.columnHeader3.Text = "Pacient";
+            this.columnHeader3.Width = 150;
             // 
-            // columnHeader4
+            // buttonStergeConsultatie
             // 
-            this.columnHeader4.DisplayIndex = 2;
-            this.columnHeader4.Text = "Varsta";
-            this.columnHeader4.Width = 50;
+            this.buttonStergeConsultatie.Location = new System.Drawing.Point(19, 270);
+            this.buttonStergeConsultatie.Name = "buttonStergeConsultatie";
+            this.buttonStergeConsultatie.Size = new System.Drawing.Size(134, 23);
+            this.buttonStergeConsultatie.TabIndex = 4;
+            this.buttonStergeConsultatie.Text = "Stergere consultatie";
+            this.toolTip1.SetToolTip(this.buttonStergeConsultatie, "Inregistrarea iesirii unui pacient din lista dumneavoastra");
+            this.buttonStergeConsultatie.UseVisualStyleBackColor = true;
             // 
-            // columnHeader5
+            // buttonModificaConsultatie
             // 
-            this.columnHeader5.Text = "CNP";
-            this.columnHeader5.Width = 100;
+            this.buttonModificaConsultatie.Location = new System.Drawing.Point(19, 175);
+            this.buttonModificaConsultatie.Name = "buttonModificaConsultatie";
+            this.buttonModificaConsultatie.Size = new System.Drawing.Size(134, 23);
+            this.buttonModificaConsultatie.TabIndex = 2;
+            this.buttonModificaConsultatie.Text = "Modificare consultatie";
+            this.toolTip1.SetToolTip(this.buttonModificaConsultatie, "Modificarea datelor pacientului (selectati pacientul)");
+            this.buttonModificaConsultatie.UseVisualStyleBackColor = true;
             // 
-            // columnHeader6
+            // buttonAdaugaConsultatie
             // 
-            this.columnHeader6.Text = "Numar fisa";
-            this.columnHeader6.Width = 100;
+            this.buttonAdaugaConsultatie.Location = new System.Drawing.Point(19, 89);
+            this.buttonAdaugaConsultatie.Name = "buttonAdaugaConsultatie";
+            this.buttonAdaugaConsultatie.Size = new System.Drawing.Size(134, 23);
+            this.buttonAdaugaConsultatie.TabIndex = 0;
+            this.buttonAdaugaConsultatie.Text = "Adaugare consultatie";
+            this.toolTip1.SetToolTip(this.buttonAdaugaConsultatie, "Adaugarea unui nou pacient in sistem");
+            this.buttonAdaugaConsultatie.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // panelConsultatii
             // 
-            this.button1.Location = new System.Drawing.Point(19, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Iesire pacient";
-            this.toolTip1.SetToolTip(this.button1, "Inregistrarea iesirii unui pacient din lista dumneavoastra");
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(19, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Inregistrare deces";
-            this.toolTip1.SetToolTip(this.button2, "Inregistrare decesului pacientului (selectare pacient)");
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(19, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Modificare pacient";
-            this.toolTip1.SetToolTip(this.button3, "Modificarea datelor pacientului (selectati pacientul)");
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(19, 60);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Adaugare consultatie";
-            this.toolTip1.SetToolTip(this.button4, "Adaugarea unui nou pacient in sistem");
-            this.button4.UseVisualStyleBackColor = true;
+            this.panelConsultatii.Controls.Add(this.listView1);
+            this.panelConsultatii.Controls.Add(this.buttonStergeConsultatie);
+            this.panelConsultatii.Controls.Add(this.buttonModificaConsultatie);
+            this.panelConsultatii.Controls.Add(this.buttonAdaugaConsultatie);
+            this.panelConsultatii.Location = new System.Drawing.Point(13, 27);
+            this.panelConsultatii.Name = "panelConsultatii";
+            this.panelConsultatii.Size = new System.Drawing.Size(775, 410);
+            this.panelConsultatii.TabIndex = 6;
             // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelConsultatii);
             this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.panelConsultatii);
             this.Controls.Add(this.panelPacienti);
             this.Controls.Add(this.panelHome);
             this.MainMenuStrip = this.menuStrip;
@@ -383,13 +348,9 @@ namespace EESSP
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonStergeConsultatie;
+        private System.Windows.Forms.Button buttonModificaConsultatie;
+        private System.Windows.Forms.Button buttonAdaugaConsultatie;
     }
 }
 

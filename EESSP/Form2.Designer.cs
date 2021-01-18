@@ -29,7 +29,9 @@ namespace EESSP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelAddPatient = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.buttonAdaugaPacient = new System.Windows.Forms.Button();
             this.checkBoxAsigurat = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -74,7 +76,7 @@ namespace EESSP
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelAddPatient.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +132,16 @@ namespace EESSP
             this.panelAddPatient.Size = new System.Drawing.Size(675, 446);
             this.panelAddPatient.TabIndex = 2;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.Location = new System.Drawing.Point(398, 427);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(277, 19);
+            this.label24.TabIndex = 45;
+            this.label24.Text = "Campurile marcate cu * sunt obligatorii!";
+            // 
             // buttonAdaugaPacient
             // 
             this.buttonAdaugaPacient.BackColor = System.Drawing.Color.SpringGreen;
@@ -150,6 +162,7 @@ namespace EESSP
             this.checkBoxAsigurat.Size = new System.Drawing.Size(70, 19);
             this.checkBoxAsigurat.TabIndex = 43;
             this.checkBoxAsigurat.Text = "Asigurat";
+            this.toolTip1.SetToolTip(this.checkBoxAsigurat, "Camp obligatoriu! Se bifeaza in cazul in care pacientul este asigurat CNAS!");
             this.checkBoxAsigurat.UseVisualStyleBackColor = true;
             // 
             // label23
@@ -168,6 +181,7 @@ namespace EESSP
             this.textBoxInaltime.Name = "textBoxInaltime";
             this.textBoxInaltime.Size = new System.Drawing.Size(55, 23);
             this.textBoxInaltime.TabIndex = 41;
+            this.toolTip1.SetToolTip(this.textBoxInaltime, "Camp oblicatoriu! Se completeaza cu un numar intreg! (ex: 174)");
             this.textBoxInaltime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // label22
@@ -195,6 +209,7 @@ namespace EESSP
             this.textBoxGreutate.Name = "textBoxGreutate";
             this.textBoxGreutate.Size = new System.Drawing.Size(55, 23);
             this.textBoxGreutate.TabIndex = 38;
+            this.toolTip1.SetToolTip(this.textBoxGreutate, "Camp oblicatoriu! Se completeaza cu un numar real! (ex: 86,5)");
             // 
             // label20
             // 
@@ -215,6 +230,7 @@ namespace EESSP
             this.comboBoxRh.Name = "comboBoxRh";
             this.comboBoxRh.Size = new System.Drawing.Size(107, 23);
             this.comboBoxRh.TabIndex = 36;
+            this.toolTip1.SetToolTip(this.comboBoxRh, "Se selecteaza Rh-ul pacientului!");
             // 
             // label19
             // 
@@ -237,6 +253,7 @@ namespace EESSP
             this.comboBoxGrSanguina.Name = "comboBoxGrSanguina";
             this.comboBoxGrSanguina.Size = new System.Drawing.Size(107, 23);
             this.comboBoxGrSanguina.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.comboBoxGrSanguina, "Se selecteaza grupa sanguina a pacientului!");
             // 
             // label18
             // 
@@ -323,6 +340,7 @@ namespace EESSP
             this.textBoxStrada.Name = "textBoxStrada";
             this.textBoxStrada.Size = new System.Drawing.Size(124, 23);
             this.textBoxStrada.TabIndex = 24;
+            this.toolTip1.SetToolTip(this.textBoxStrada, "Se completeaza numele strazii unde locuieste pacientul!");
             // 
             // label13
             // 
@@ -349,6 +367,7 @@ namespace EESSP
             this.textBoxLocalitate.Name = "textBoxLocalitate";
             this.textBoxLocalitate.Size = new System.Drawing.Size(124, 23);
             this.textBoxLocalitate.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.textBoxLocalitate, "Camp oblicatoriu! Se completeaza numele localitatii!");
             // 
             // textBoxJudet
             // 
@@ -357,6 +376,7 @@ namespace EESSP
             this.textBoxJudet.Name = "textBoxJudet";
             this.textBoxJudet.Size = new System.Drawing.Size(124, 23);
             this.textBoxJudet.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.textBoxJudet, "Camp oblicatoriu! Se completeaza numele jutetului!");
             // 
             // label11
             // 
@@ -383,6 +403,7 @@ namespace EESSP
             this.textBoxTelefon.Name = "textBoxTelefon";
             this.textBoxTelefon.Size = new System.Drawing.Size(124, 23);
             this.textBoxTelefon.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.textBoxTelefon, "Se completeaza cu cifre!");
             this.textBoxTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // label9
@@ -410,6 +431,7 @@ namespace EESSP
             this.textBoxVarsta.Name = "textBoxVarsta";
             this.textBoxVarsta.Size = new System.Drawing.Size(124, 23);
             this.textBoxVarsta.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.textBoxVarsta, "Camp oblicatoriu! Se completeaza varsta pacientului, cu cifre!");
             this.textBoxVarsta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // datePickerDataNastere
@@ -436,6 +458,7 @@ namespace EESSP
             this.textBoxPrenume.Name = "textBoxPrenume";
             this.textBoxPrenume.Size = new System.Drawing.Size(124, 23);
             this.textBoxPrenume.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.textBoxPrenume, "Camp oblicatoriu! Se completeaza prenumele pacientului!");
             // 
             // label6
             // 
@@ -453,6 +476,7 @@ namespace EESSP
             this.textBoxNume.Name = "textBoxNume";
             this.textBoxNume.Size = new System.Drawing.Size(124, 23);
             this.textBoxNume.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.textBoxNume, "Camp oblicatoriu! Se completeaza numele pacientului!");
             // 
             // label5
             // 
@@ -470,6 +494,7 @@ namespace EESSP
             this.textBoxGen.Name = "textBoxGen";
             this.textBoxGen.Size = new System.Drawing.Size(124, 23);
             this.textBoxGen.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.textBoxGen, "Camp oblicatoriu! Se completeaza cu M sau F!");
             // 
             // textBoxNumarFisa
             // 
@@ -478,6 +503,7 @@ namespace EESSP
             this.textBoxNumarFisa.Name = "textBoxNumarFisa";
             this.textBoxNumarFisa.Size = new System.Drawing.Size(124, 23);
             this.textBoxNumarFisa.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.textBoxNumarFisa, "Camp oblicatoriu! Se completeaza cu cifre!");
             this.textBoxNumarFisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             // 
             // textBoxCNP
@@ -487,6 +513,7 @@ namespace EESSP
             this.textBoxCNP.Name = "textBoxCNP";
             this.textBoxCNP.Size = new System.Drawing.Size(124, 23);
             this.textBoxCNP.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.textBoxCNP, "Camp oblicatoriu! Se completeaza cu cifre!");
             this.textBoxCNP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberKeyPress);
             this.textBoxCNP.Leave += new System.EventHandler(this.textBoxCNP_Leave);
             // 
@@ -526,16 +553,6 @@ namespace EESSP
             this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Adaugare pacient";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(398, 427);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(277, 19);
-            this.label24.TabIndex = 45;
-            this.label24.Text = "Campurile marcate cu * sunt obligatorii!";
             // 
             // Form2
             // 
@@ -599,5 +616,6 @@ namespace EESSP
         private System.Windows.Forms.CheckBox checkBoxAsigurat;
         private System.Windows.Forms.Button buttonAdaugaPacient;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
