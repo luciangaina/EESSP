@@ -15,7 +15,8 @@ namespace EESSP
     public enum Screen
     {
         ModificaPacient,
-        FisaPacient
+        FisaPacient,
+        AdaugaConsultatieCnp
     }
     public partial class MainApp : Form
     {
@@ -136,6 +137,22 @@ namespace EESSP
                 }
                 else
                     MessageBox.Show("Pacientul selectat nu mai apartine sistemului!", "Eroare", MessageBoxButtons.OK);
+            }
+        }
+
+        private void buttonCreazaConsultatie_Click(object sender, EventArgs e)
+        {
+            if (listViewPacienti.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Pacientul nu a fost selectat!", "Eroare", MessageBoxButtons.OK);
+            }
+            else
+            {
+                var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
+                var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
+
+                Form4 adaugareConsultatie = new Form4(pacient, Screen.AdaugaConsultatieCnp);
+                adaugareConsultatie.Show();
             }
         }
     }

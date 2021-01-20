@@ -1027,7 +1027,7 @@ namespace EESSP
             this.Controls.Add(this.panelFisaPacient);
             this.Controls.Add(this.panelEditPacient);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Sanitary Manager";
             this.Load += new System.EventHandler(this.Form3_onLoad);
             this.panelEditPacient.ResumeLayout(false);
             this.panelEditPacient.PerformLayout();
@@ -1111,7 +1111,6 @@ namespace EESSP
         private System.Windows.Forms.Label labelCNP;
         private System.Windows.Forms.Label labelNrFisa;
         private System.Windows.Forms.Label labelGender;
-        private System.Windows.Forms.Label labelGen;
         private System.Windows.Forms.Label labelNume;
         private System.Windows.Forms.Label labelDataNastere;
         private System.Windows.Forms.Label labelPrenume;
