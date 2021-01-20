@@ -58,6 +58,9 @@ namespace EESSP
             this.buttonModificaConsultatie = new System.Windows.Forms.Button();
             this.buttonAdaugaConsultatie = new System.Windows.Forms.Button();
             this.panelConsultatii = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonCreazaConsultatie = new System.Windows.Forms.Button();
             this.panelHome.SuspendLayout();
             this.panelPacienti.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -86,6 +89,9 @@ namespace EESSP
             // 
             // panelPacienti
             // 
+            this.panelPacienti.Controls.Add(this.buttonCreazaConsultatie);
+            this.panelPacienti.Controls.Add(this.label3);
+            this.panelPacienti.Controls.Add(this.label2);
             this.panelPacienti.Controls.Add(this.buttonVizualizareFisa);
             this.panelPacienti.Controls.Add(this.listViewPacienti);
             this.panelPacienti.Controls.Add(this.buttonExitedPatient);
@@ -99,7 +105,7 @@ namespace EESSP
             // 
             // buttonVizualizareFisa
             // 
-            this.buttonVizualizareFisa.Location = new System.Drawing.Point(19, 335);
+            this.buttonVizualizareFisa.Location = new System.Drawing.Point(34, 146);
             this.buttonVizualizareFisa.Name = "buttonVizualizareFisa";
             this.buttonVizualizareFisa.Size = new System.Drawing.Size(119, 23);
             this.buttonVizualizareFisa.TabIndex = 6;
@@ -121,9 +127,9 @@ namespace EESSP
             this.listViewPacienti.FullRowSelect = true;
             this.listViewPacienti.GridLines = true;
             this.listViewPacienti.HideSelection = false;
-            this.listViewPacienti.Location = new System.Drawing.Point(227, 60);
+            this.listViewPacienti.Location = new System.Drawing.Point(227, 22);
             this.listViewPacienti.Name = "listViewPacienti";
-            this.listViewPacienti.Size = new System.Drawing.Size(524, 334);
+            this.listViewPacienti.Size = new System.Drawing.Size(524, 372);
             this.listViewPacienti.TabIndex = 5;
             this.toolTip1.SetToolTip(this.listViewPacienti, "Lista pacientilor");
             this.listViewPacienti.UseCompatibleStateImageBehavior = false;
@@ -163,7 +169,7 @@ namespace EESSP
             // 
             // buttonExitedPatient
             // 
-            this.buttonExitedPatient.Location = new System.Drawing.Point(19, 270);
+            this.buttonExitedPatient.Location = new System.Drawing.Point(34, 351);
             this.buttonExitedPatient.Name = "buttonExitedPatient";
             this.buttonExitedPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonExitedPatient.TabIndex = 4;
@@ -174,7 +180,7 @@ namespace EESSP
             // 
             // buttonDeathPatient
             // 
-            this.buttonDeathPatient.Location = new System.Drawing.Point(19, 204);
+            this.buttonDeathPatient.Location = new System.Drawing.Point(34, 310);
             this.buttonDeathPatient.Name = "buttonDeathPatient";
             this.buttonDeathPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonDeathPatient.TabIndex = 3;
@@ -185,7 +191,7 @@ namespace EESSP
             // 
             // buttonEditPatient
             // 
-            this.buttonEditPatient.Location = new System.Drawing.Point(19, 134);
+            this.buttonEditPatient.Location = new System.Drawing.Point(34, 105);
             this.buttonEditPatient.Name = "buttonEditPatient";
             this.buttonEditPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonEditPatient.TabIndex = 2;
@@ -196,7 +202,7 @@ namespace EESSP
             // 
             // buttonAddPatient
             // 
-            this.buttonAddPatient.Location = new System.Drawing.Point(19, 60);
+            this.buttonAddPatient.Location = new System.Drawing.Point(34, 60);
             this.buttonAddPatient.Name = "buttonAddPatient";
             this.buttonAddPatient.Size = new System.Drawing.Size(119, 23);
             this.buttonAddPatient.TabIndex = 0;
@@ -311,6 +317,36 @@ namespace EESSP
             this.panelConsultatii.Size = new System.Drawing.Size(775, 410);
             this.panelConsultatii.TabIndex = 6;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(0, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Gestiune pacient";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(0, 270);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 19);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Iesire pacient";
+            // 
+            // buttonCreazaConsultatie
+            // 
+            this.buttonCreazaConsultatie.Location = new System.Drawing.Point(34, 194);
+            this.buttonCreazaConsultatie.Name = "buttonCreazaConsultatie";
+            this.buttonCreazaConsultatie.Size = new System.Drawing.Size(119, 23);
+            this.buttonCreazaConsultatie.TabIndex = 9;
+            this.buttonCreazaConsultatie.Text = "Creaza consultatie";
+            this.toolTip1.SetToolTip(this.buttonCreazaConsultatie, "Creaza o consultatie pentru un pacient.");
+            this.buttonCreazaConsultatie.UseVisualStyleBackColor = true;
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -327,6 +363,7 @@ namespace EESSP
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();
             this.panelPacienti.ResumeLayout(false);
+            this.panelPacienti.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.panelConsultatii.ResumeLayout(false);
@@ -365,6 +402,9 @@ namespace EESSP
         private System.Windows.Forms.Button buttonModificaConsultatie;
         private System.Windows.Forms.Button buttonAdaugaConsultatie;
         private System.Windows.Forms.Button buttonVizualizareFisa;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonCreazaConsultatie;
     }
 }
 
