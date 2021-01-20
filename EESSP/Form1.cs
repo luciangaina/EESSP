@@ -130,7 +130,7 @@ namespace EESSP
                 var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP.Equals(consultatie.CnpPacient)).FirstOrDefault();
                 var numePacient = pacient.Nume.Trim() + " " + pacient.Prenume.Trim();
 
-                var row = new string[] { consultatie.DataConsultatie.ToString("d"), consultatie.DataConsultatie.TimeOfDay.ToString(), numePacient };
+                var row = new string[] { consultatie.Id.ToString(), consultatie.DataConsultatie.ToString("d"), consultatie.DataConsultatie.TimeOfDay.ToString(), numePacient };
                 var listItem = new ListViewItem(row);
                 listItem.Tag = consultatie;
                 if (!consultatie.EsteSters)
@@ -172,6 +172,26 @@ namespace EESSP
 
                 Form4 adaugareConsultatie = new Form4(pacient, Screen.AdaugaConsultatieCnp);
                 adaugareConsultatie.Show();
+            }
+        }
+
+        private void buttonStergeConsultatie_Click(object sender, EventArgs e)
+        {
+            if (listViewConsultatii.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Consultatia nu a fost selectata!", "Eroare", MessageBoxButtons.OK);
+            }
+            else
+            {
+                var idConsultatie = int.Parse(listViewConsultatii.SelectedItems[0].SubItems[0].Text);
+                var consultatie = _dbContext.Consultatie.Where(consultatie => consultatie.Id == idConsultatie).FirstOrDefault();
+
+                consultatie.EsteSters = true;
+                _dbContext.Update(consultatie);
+                _dbContext.SaveChanges();
+                var response = MessageBox.Show("Consultatia a fost stearsa.", "", MessageBoxButtons.OK);
+                if (response == DialogResult.OK)
+                    refreshConsultatiiList();
             }
         }
     }

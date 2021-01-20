@@ -54,6 +54,7 @@ namespace EESSP
             this.ajutorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.listViewConsultatii = new System.Windows.Forms.ListView();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -278,6 +279,7 @@ namespace EESSP
             // listViewConsultatii
             // 
             this.listViewConsultatii.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
@@ -292,6 +294,11 @@ namespace EESSP
             this.toolTip1.SetToolTip(this.listViewConsultatii, "Lista pacientilor");
             this.listViewConsultatii.UseCompatibleStateImageBehavior = false;
             this.listViewConsultatii.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Id";
+            this.columnHeader5.Width = 40;
             // 
             // columnHeader1
             // 
@@ -317,6 +324,7 @@ namespace EESSP
             this.buttonStergeConsultatie.Text = "Stergere consultatie";
             this.toolTip1.SetToolTip(this.buttonStergeConsultatie, "Inregistrarea iesirii unui pacient din lista dumneavoastra");
             this.buttonStergeConsultatie.UseVisualStyleBackColor = true;
+            this.buttonStergeConsultatie.Click += new System.EventHandler(this.buttonStergeConsultatie_Click);
             // 
             // buttonModificaConsultatie
             // 
@@ -419,6 +427,7 @@ namespace EESSP
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCreazaConsultatie;
         private System.Windows.Forms.Button buttonVizualizareConsultatie;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 
