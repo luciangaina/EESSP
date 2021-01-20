@@ -248,6 +248,7 @@ namespace EESSP
             this.buttonSelectDiagnostic.TabIndex = 53;
             this.buttonSelectDiagnostic.Text = "Selecteaza diagnostic";
             this.buttonSelectDiagnostic.UseVisualStyleBackColor = true;
+            this.buttonSelectDiagnostic.Click += new System.EventHandler(this.buttonSelectDiagnostic_Click);
             // 
             // textBox2
             // 

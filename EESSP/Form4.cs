@@ -76,5 +76,10 @@ namespace EESSP
                 this.Close();
             }
         }
+
+        private void buttonSelectDiagnostic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
