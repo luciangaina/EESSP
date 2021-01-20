@@ -79,7 +79,8 @@ namespace EESSP
 
         private void buttonSelectDiagnostic_Click(object sender, EventArgs e)
         {
-
+            Form5 listaDiagnostice = new Form5();
+            listaDiagnostice.Show();
         }
     }
 }

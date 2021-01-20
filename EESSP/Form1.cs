@@ -184,15 +184,19 @@ namespace EESSP
             }
             else
             {
-                var idConsultatie = int.Parse(listViewConsultatii.SelectedItems[0].SubItems[0].Text);
-                var consultatie = _dbContext.Consultatie.Where(consultatie => consultatie.Id == idConsultatie).FirstOrDefault();
+                var response = MessageBox.Show("Doriti sa stergeti consultatia?", "", MessageBoxButtons.YesNo);
+                if (response == DialogResult.Yes)
+                {
+                    var idConsultatie = int.Parse(listViewConsultatii.SelectedItems[0].SubItems[0].Text);
+                    var consultatie = _dbContext.Consultatie.Where(consultatie => consultatie.Id == idConsultatie).FirstOrDefault();
 
-                consultatie.EsteSters = true;
-                _dbContext.Update(consultatie);
-                _dbContext.SaveChanges();
-                var response = MessageBox.Show("Consultatia a fost stearsa.", "", MessageBoxButtons.OK);
-                if (response == DialogResult.OK)
-                    refreshConsultatiiList();
+                    consultatie.EsteSters = true;
+                    _dbContext.Update(consultatie);
+                    _dbContext.SaveChanges();
+                    var finalMessage = MessageBox.Show("Consultatia a fost stearsa.", "", MessageBoxButtons.OK);
+                    if (finalMessage == DialogResult.OK)
+                        refreshConsultatiiList();
+                }
             }
         }
 
