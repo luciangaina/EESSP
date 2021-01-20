@@ -47,7 +47,7 @@ namespace EESSP
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxDataConsultatie = new System.Windows.Forms.TextBox();
             this.buttonSelectDiagnostic = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNumeDiagnostic = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxCodDiagnostic = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -170,7 +170,7 @@ namespace EESSP
             this.panelVizualizareConsultatie.Controls.Add(this.label12);
             this.panelVizualizareConsultatie.Controls.Add(this.textBoxDataConsultatie);
             this.panelVizualizareConsultatie.Controls.Add(this.buttonSelectDiagnostic);
-            this.panelVizualizareConsultatie.Controls.Add(this.textBox2);
+            this.panelVizualizareConsultatie.Controls.Add(this.textBoxNumeDiagnostic);
             this.panelVizualizareConsultatie.Controls.Add(this.label11);
             this.panelVizualizareConsultatie.Controls.Add(this.textBoxCodDiagnostic);
             this.panelVizualizareConsultatie.Controls.Add(this.label10);
@@ -250,13 +250,14 @@ namespace EESSP
             this.buttonSelectDiagnostic.UseVisualStyleBackColor = true;
             this.buttonSelectDiagnostic.Click += new System.EventHandler(this.buttonSelectDiagnostic_Click);
             // 
-            // textBox2
+            // textBoxNumeDiagnostic
             // 
-            this.textBox2.Location = new System.Drawing.Point(104, 181);
-            this.textBox2.MaxLength = 13;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(266, 23);
-            this.textBox2.TabIndex = 52;
+            this.textBoxNumeDiagnostic.Location = new System.Drawing.Point(104, 181);
+            this.textBoxNumeDiagnostic.MaxLength = 13;
+            this.textBoxNumeDiagnostic.Name = "textBoxNumeDiagnostic";
+            this.textBoxNumeDiagnostic.ReadOnly = true;
+            this.textBoxNumeDiagnostic.Size = new System.Drawing.Size(266, 23);
+            this.textBoxNumeDiagnostic.TabIndex = 52;
             // 
             // label11
             // 
@@ -274,6 +275,7 @@ namespace EESSP
             this.textBoxCodDiagnostic.Name = "textBoxCodDiagnostic";
             this.textBoxCodDiagnostic.Size = new System.Drawing.Size(61, 23);
             this.textBoxCodDiagnostic.TabIndex = 50;
+            this.textBoxCodDiagnostic.Leave += new System.EventHandler(this.textBoxCodDiagnostic_Leave);
             // 
             // label10
             // 
@@ -389,7 +391,7 @@ namespace EESSP
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxCodDiagnostic;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNumeDiagnostic;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button buttonSelectDiagnostic;
         private System.Windows.Forms.TextBox textBoxDataConsultatie;

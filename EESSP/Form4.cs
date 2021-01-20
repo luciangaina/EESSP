@@ -18,6 +18,7 @@ namespace EESSP
         private Screen screen;
         private MainApp parentForm;
         private Consultatie consultatie;
+        public string codDiagnosticResult;
 
         public Form4()
         {
@@ -47,12 +48,12 @@ namespace EESSP
                 textBoxCNP.ReadOnly = true;
                 textBoxPacient.ReadOnly = true;
             }
-            else if(screen==Screen.VizualizareConsultatie)
+            else if (screen == Screen.VizualizareConsultatie)
             {
                 panelVizualizareConsultatie.BringToFront();
                 textBoxCnpConsultatie.Text = consultatie.CnpPacient;
                 var pacientConsultatie = _dbContext.Pacient.Where(pacient => pacient.CNP.Equals(consultatie.CnpPacient)).FirstOrDefault();
-                textBoxPacientConsultatie.Text= pacientConsultatie.Nume.Trim() + " " + pacientConsultatie.Prenume.Trim();
+                textBoxPacientConsultatie.Text = pacientConsultatie.Nume.Trim() + " " + pacientConsultatie.Prenume.Trim();
                 textBoxDataConsultatie.Text = consultatie.DataConsultatie.ToString("d");
             }
         }
@@ -79,8 +80,25 @@ namespace EESSP
 
         private void buttonSelectDiagnostic_Click(object sender, EventArgs e)
         {
-            Form5 listaDiagnostice = new Form5();
-            listaDiagnostice.Show();
+            Form5 listaDiagnostice = new Form5(this);
+            listaDiagnostice.ShowDialog();
+
+            textBoxCodDiagnostic.Text = codDiagnosticResult;
+            var diagnostic = _dbContext.Diagnostic.Where(diagnostic => diagnostic.CodDiagnostic.Equals(codDiagnosticResult)).FirstOrDefault();
+            textBoxNumeDiagnostic.Text = diagnostic.NumeDiagnostic;
+        }
+
+        private void textBoxCodDiagnostic_Leave(object sender, EventArgs e)
+        {
+            var codDiagnostic = textBoxCodDiagnostic.Text;
+            var diagnostic = _dbContext.Diagnostic.Where(diagnostic => diagnostic.CodDiagnostic.Equals(codDiagnostic)).FirstOrDefault();
+            if (diagnostic == default)
+            {
+                MessageBox.Show("Diagnosticul nu exista in baza de date.\nConsultati lista de diagnostice!", "Eroare", MessageBoxButtons.OK);
+                textBoxCodDiagnostic.Clear();
+            }
+            else
+                textBoxNumeDiagnostic.Text = diagnostic.NumeDiagnostic;
         }
     }
 }

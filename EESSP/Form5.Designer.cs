@@ -32,6 +32,7 @@ namespace EESSP
             this.listViewDiagnostic = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.buttonSelectDiagnostic = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewDiagnostic
@@ -39,6 +40,7 @@ namespace EESSP
             this.listViewDiagnostic.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.listViewDiagnostic.FullRowSelect = true;
             this.listViewDiagnostic.GridLines = true;
             this.listViewDiagnostic.HideSelection = false;
             this.listViewDiagnostic.Location = new System.Drawing.Point(12, 12);
@@ -57,11 +59,22 @@ namespace EESSP
             this.columnHeader2.Text = "Diagnostic";
             this.columnHeader2.Width = 390;
             // 
+            // buttonSelectDiagnostic
+            // 
+            this.buttonSelectDiagnostic.Location = new System.Drawing.Point(182, 204);
+            this.buttonSelectDiagnostic.Name = "buttonSelectDiagnostic";
+            this.buttonSelectDiagnostic.Size = new System.Drawing.Size(136, 23);
+            this.buttonSelectDiagnostic.TabIndex = 1;
+            this.buttonSelectDiagnostic.Text = "Selecteaza diagnostic";
+            this.buttonSelectDiagnostic.UseVisualStyleBackColor = true;
+            this.buttonSelectDiagnostic.Click += new System.EventHandler(this.buttonSelectDiagnostic_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 206);
+            this.ClientSize = new System.Drawing.Size(486, 239);
+            this.Controls.Add(this.buttonSelectDiagnostic);
             this.Controls.Add(this.listViewDiagnostic);
             this.Name = "Form5";
             this.Text = "Sanitary Manager";
@@ -75,5 +88,6 @@ namespace EESSP
         private System.Windows.Forms.ListView listViewDiagnostic;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button buttonSelectDiagnostic;
     }
 }
