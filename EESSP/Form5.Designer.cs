@@ -65,6 +65,7 @@ namespace EESSP
             this.Controls.Add(this.listViewDiagnostic);
             this.Name = "Form5";
             this.Text = "Sanitary Manager";
+            this.Load += new System.EventHandler(this.Form5_onLoad);
             this.ResumeLayout(false);
 
         }

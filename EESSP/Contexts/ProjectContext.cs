@@ -17,6 +17,8 @@ namespace EESSP.Contexts
 
         public virtual DbSet<Pacient> Pacient { get; set; }
         public virtual DbSet<Consultatie> Consultatie { get; set; }
+        public virtual DbSet<Diagnostic> Diagnostic { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
