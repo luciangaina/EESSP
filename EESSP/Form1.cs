@@ -16,7 +16,8 @@ namespace EESSP
     {
         ModificaPacient,
         FisaPacient,
-        AdaugaConsultatieCnp
+        AdaugaConsultatieCnp,
+        VizualizareConsultatie
     }
     public partial class MainApp : Form
     {
@@ -192,6 +193,22 @@ namespace EESSP
                 var response = MessageBox.Show("Consultatia a fost stearsa.", "", MessageBoxButtons.OK);
                 if (response == DialogResult.OK)
                     refreshConsultatiiList();
+            }
+        }
+
+        private void buttonVizualizareConsultatie_Click(object sender, EventArgs e)
+        {
+            if (listViewConsultatii.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Consultatia nu a fost selectata!", "Eroare", MessageBoxButtons.OK);
+            }
+            else
+            {
+                var idConsultatie = int.Parse(listViewConsultatii.SelectedItems[0].SubItems[0].Text);
+                var consultatie = _dbContext.Consultatie.Where(consultatie => consultatie.Id == idConsultatie).FirstOrDefault();
+
+                Form4 vizualizareConsultatie = new Form4(consultatie, Screen.VizualizareConsultatie);
+                vizualizareConsultatie.Show();
             }
         }
     }

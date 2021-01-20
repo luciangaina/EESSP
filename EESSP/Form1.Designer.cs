@@ -355,6 +355,7 @@ namespace EESSP
             this.buttonVizualizareConsultatie.Text = "Vizualizare consultatie";
             this.toolTip1.SetToolTip(this.buttonVizualizareConsultatie, "Adaugarea unui diagnostic pacientului consultat.");
             this.buttonVizualizareConsultatie.UseVisualStyleBackColor = true;
+            this.buttonVizualizareConsultatie.Click += new System.EventHandler(this.buttonVizualizareConsultatie_Click);
             // 
             // panelConsultatii
             // 

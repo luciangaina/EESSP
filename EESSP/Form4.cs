@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace EESSP
         private Pacient pacient;
         private Screen screen;
         private MainApp parentForm;
+        private Consultatie consultatie;
 
         public Form4()
         {
@@ -28,6 +30,13 @@ namespace EESSP
             this.screen = screen;
         }
 
+        public Form4(Consultatie consultatie, Screen screen)
+        {
+            InitializeComponent();
+            this.consultatie = consultatie;
+            this.screen = screen;
+        }
+
         private void Form4_onLoad(object sender, EventArgs e)
         {
             if (screen == Screen.AdaugaConsultatieCnp)
@@ -37,6 +46,14 @@ namespace EESSP
                 textBoxPacient.Text = pacient.Nume.Trim() + " " + pacient.Prenume.Trim();
                 textBoxCNP.ReadOnly = true;
                 textBoxPacient.ReadOnly = true;
+            }
+            else if(screen==Screen.VizualizareConsultatie)
+            {
+                panelVizualizareConsultatie.BringToFront();
+                textBoxCnpConsultatie.Text = consultatie.CnpPacient;
+                var pacientConsultatie = _dbContext.Pacient.Where(pacient => pacient.CNP.Equals(consultatie.CnpPacient)).FirstOrDefault();
+                textBoxPacientConsultatie.Text= pacientConsultatie.Nume.Trim() + " " + pacientConsultatie.Prenume.Trim();
+                textBoxDataConsultatie.Text = consultatie.DataConsultatie.ToString("d");
             }
         }
 
