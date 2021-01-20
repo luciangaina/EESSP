@@ -1024,8 +1024,8 @@ namespace EESSP
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 450);
-            this.Controls.Add(this.panelEditPacient);
             this.Controls.Add(this.panelFisaPacient);
+            this.Controls.Add(this.panelEditPacient);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_onLoad);

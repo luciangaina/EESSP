@@ -33,6 +33,7 @@ namespace EESSP
             this.panelHome = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelPacienti = new System.Windows.Forms.Panel();
+            this.buttonVizualizareFisa = new System.Windows.Forms.Button();
             this.listViewPacienti = new System.Windows.Forms.ListView();
             this.chNume = new System.Windows.Forms.ColumnHeader();
             this.chPrenume = new System.Windows.Forms.ColumnHeader();
@@ -85,6 +86,7 @@ namespace EESSP
             // 
             // panelPacienti
             // 
+            this.panelPacienti.Controls.Add(this.buttonVizualizareFisa);
             this.panelPacienti.Controls.Add(this.listViewPacienti);
             this.panelPacienti.Controls.Add(this.buttonExitedPatient);
             this.panelPacienti.Controls.Add(this.buttonDeathPatient);
@@ -94,6 +96,17 @@ namespace EESSP
             this.panelPacienti.Name = "panelPacienti";
             this.panelPacienti.Size = new System.Drawing.Size(775, 410);
             this.panelPacienti.TabIndex = 2;
+            // 
+            // buttonVizualizareFisa
+            // 
+            this.buttonVizualizareFisa.Location = new System.Drawing.Point(19, 335);
+            this.buttonVizualizareFisa.Name = "buttonVizualizareFisa";
+            this.buttonVizualizareFisa.Size = new System.Drawing.Size(119, 23);
+            this.buttonVizualizareFisa.TabIndex = 6;
+            this.buttonVizualizareFisa.Text = "Vizualizare fisa";
+            this.toolTip1.SetToolTip(this.buttonVizualizareFisa, "Vizualizati fisa pacientului selectat. (Selectati un pacient!)");
+            this.buttonVizualizareFisa.UseVisualStyleBackColor = true;
+            this.buttonVizualizareFisa.Click += new System.EventHandler(this.buttonVizualizareFisa_Click);
             // 
             // listViewPacienti
             // 
@@ -304,9 +317,9 @@ namespace EESSP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip);
-            this.Controls.Add(this.panelConsultatii);
             this.Controls.Add(this.panelPacienti);
             this.Controls.Add(this.panelHome);
+            this.Controls.Add(this.panelConsultatii);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainApp";
             this.Text = "Sanitary Manager";
@@ -351,6 +364,7 @@ namespace EESSP
         private System.Windows.Forms.Button buttonStergeConsultatie;
         private System.Windows.Forms.Button buttonModificaConsultatie;
         private System.Windows.Forms.Button buttonAdaugaConsultatie;
+        private System.Windows.Forms.Button buttonVizualizareFisa;
     }
 }
 

@@ -68,10 +68,10 @@ namespace EESSP
                 panelFisaPacient.BringToFront();
                 labelCNP.Text = pacient.CNP;
                 labelNrFisa.Text = pacient.NrFisa;
-                labelGen.Text = pacient.Gen;
+                labelGender.Text = pacient.Gen;
                 labelNume.Text = pacient.Nume;
                 labelPrenume.Text = pacient.Prenume;
-                labelDataNastere.Text = pacient.DataNastere.ToString();
+                labelDataNastere.Text = pacient.DataNastere.ToString("d");
                 labelVarsta.Text = pacient.Varsta.ToString();
                 labelAsigurare.Text = pacient.Asigurare ? "Asigurat" : "Neasigurat";
                 labelTelefon.Text = pacient.Telefon;

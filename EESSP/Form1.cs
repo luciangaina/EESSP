@@ -118,5 +118,25 @@ namespace EESSP
             panelConsultatii.BringToFront();
         }
 
+        private void buttonVizualizareFisa_Click(object sender, EventArgs e)
+        {
+            if (listViewPacienti.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Pacientul nu a fost selectat!", "Eroare", MessageBoxButtons.OK);
+            }
+            else
+            {
+                var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
+                var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
+
+                if (pacient.EstePacient)
+                {
+                    Form3 editarePacient = new Form3(this, pacient, Screen.FisaPacient);
+                    editarePacient.Show();
+                }
+                else
+                    MessageBox.Show("Pacientul selectat nu mai apartine sistemului!", "Eroare", MessageBoxButtons.OK);
+            }
+        }
     }
 }
