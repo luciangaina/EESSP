@@ -117,6 +117,25 @@ namespace EESSP
         private void consultatiiMenuItem_onClick(object sender, EventArgs e)
         {
             panelConsultatii.BringToFront();
+            refreshConsultatiiList();
+        }
+
+        private async void refreshConsultatiiList()
+        {
+            listViewConsultatii.Items.Clear();
+
+            var consultatii = await _dbContext.Consultatie.OrderBy(consultatie => consultatie.DataConsultatie).ToListAsync();
+            foreach (var consultatie in consultatii)
+            {
+                var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP.Equals(consultatie.CnpPacient)).FirstOrDefault();
+                var numePacient = pacient.Nume.Trim() + " " + pacient.Prenume.Trim();
+
+                var row = new string[] { consultatie.DataConsultatie.ToString("d"), consultatie.DataConsultatie.TimeOfDay.ToString(), numePacient };
+                var listItem = new ListViewItem(row);
+                listItem.Tag = consultatie;
+                if (!consultatie.EsteSters)
+                    listViewConsultatii.Items.Add(listItem);
+            }
         }
 
         private void buttonVizualizareFisa_Click(object sender, EventArgs e)
