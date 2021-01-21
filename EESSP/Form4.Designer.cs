@@ -60,8 +60,18 @@ namespace EESSP
             this.label8 = new System.Windows.Forms.Label();
             this.labelVizualizareConsultatie = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panelModificaConsultatie = new System.Windows.Forms.Panel();
+            this.buttonSalveazaModificari = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxPacientModificare = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxCnpModificare = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dateTimePickerModificareConsultatie = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
             this.panelAdaugareConsultatie.SuspendLayout();
             this.panelVizualizareConsultatie.SuspendLayout();
+            this.panelModificaConsultatie.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdaugareConsultatie
@@ -357,13 +367,102 @@ namespace EESSP
             this.labelVizualizareConsultatie.TabIndex = 1;
             this.labelVizualizareConsultatie.Text = "Vizualizare consultatie";
             // 
+            // panelModificaConsultatie
+            // 
+            this.panelModificaConsultatie.Controls.Add(this.dateTimePickerModificareConsultatie);
+            this.panelModificaConsultatie.Controls.Add(this.label16);
+            this.panelModificaConsultatie.Controls.Add(this.buttonSalveazaModificari);
+            this.panelModificaConsultatie.Controls.Add(this.label13);
+            this.panelModificaConsultatie.Controls.Add(this.textBoxPacientModificare);
+            this.panelModificaConsultatie.Controls.Add(this.label14);
+            this.panelModificaConsultatie.Controls.Add(this.textBoxCnpModificare);
+            this.panelModificaConsultatie.Controls.Add(this.label15);
+            this.panelModificaConsultatie.Location = new System.Drawing.Point(12, 12);
+            this.panelModificaConsultatie.Name = "panelModificaConsultatie";
+            this.panelModificaConsultatie.Size = new System.Drawing.Size(536, 370);
+            this.panelModificaConsultatie.TabIndex = 59;
+            // 
+            // buttonSalveazaModificari
+            // 
+            this.buttonSalveazaModificari.Location = new System.Drawing.Point(289, 165);
+            this.buttonSalveazaModificari.Name = "buttonSalveazaModificari";
+            this.buttonSalveazaModificari.Size = new System.Drawing.Size(124, 23);
+            this.buttonSalveazaModificari.TabIndex = 24;
+            this.buttonSalveazaModificari.Text = "Salveaza modificari";
+            this.buttonSalveazaModificari.UseVisualStyleBackColor = true;
+            this.buttonSalveazaModificari.Click += new System.EventHandler(this.buttonSalveazaModificari_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(33, 105);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(103, 15);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Data consultatie *:";
+            // 
+            // textBoxPacientModificare
+            // 
+            this.textBoxPacientModificare.Location = new System.Drawing.Point(327, 58);
+            this.textBoxPacientModificare.MaxLength = 99999;
+            this.textBoxPacientModificare.Name = "textBoxPacientModificare";
+            this.textBoxPacientModificare.ReadOnly = true;
+            this.textBoxPacientModificare.Size = new System.Drawing.Size(172, 23);
+            this.textBoxPacientModificare.TabIndex = 22;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(272, 61);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 15);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Pacient:";
+            // 
+            // textBoxCnpModificare
+            // 
+            this.textBoxCnpModificare.Location = new System.Drawing.Point(81, 58);
+            this.textBoxCnpModificare.MaxLength = 13;
+            this.textBoxCnpModificare.Name = "textBoxCnpModificare";
+            this.textBoxCnpModificare.ReadOnly = true;
+            this.textBoxCnpModificare.Size = new System.Drawing.Size(124, 23);
+            this.textBoxCnpModificare.TabIndex = 20;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(33, 61);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(42, 15);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "CNP *:";
+            // 
+            // dateTimePickerModificareConsultatie
+            // 
+            this.dateTimePickerModificareConsultatie.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerModificareConsultatie.Location = new System.Drawing.Point(142, 99);
+            this.dateTimePickerModificareConsultatie.Name = "dateTimePickerModificareConsultatie";
+            this.dateTimePickerModificareConsultatie.Size = new System.Drawing.Size(124, 23);
+            this.dateTimePickerModificareConsultatie.TabIndex = 26;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(0, 1);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(158, 19);
+            this.label16.TabIndex = 25;
+            this.label16.Text = "Modificare consultatie";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 395);
-            this.Controls.Add(this.panelVizualizareConsultatie);
+            this.Controls.Add(this.panelModificaConsultatie);
             this.Controls.Add(this.panelAdaugareConsultatie);
+            this.Controls.Add(this.panelVizualizareConsultatie);
             this.Name = "Form4";
             this.Text = "Sanitary Manager";
             this.Load += new System.EventHandler(this.Form4_onLoad);
@@ -371,6 +470,8 @@ namespace EESSP
             this.panelAdaugareConsultatie.PerformLayout();
             this.panelVizualizareConsultatie.ResumeLayout(false);
             this.panelVizualizareConsultatie.PerformLayout();
+            this.panelModificaConsultatie.ResumeLayout(false);
+            this.panelModificaConsultatie.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -407,5 +508,16 @@ namespace EESSP
         private System.Windows.Forms.TextBox textBoxRecomandari;
         private System.Windows.Forms.Button buttonSalveazaConsultatie;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panelModificaConsultatie;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBoxCnpModificare;
+        private System.Windows.Forms.TextBox textBoxPacientModificare;
+        private System.Windows.Forms.Button buttonSalveazaModificari;
+        private System.Windows.Forms.DateTimePicker dateTimePickerModificareConsultatie;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -322,7 +322,7 @@ namespace EESSP
             this.buttonStergeConsultatie.Size = new System.Drawing.Size(134, 23);
             this.buttonStergeConsultatie.TabIndex = 4;
             this.buttonStergeConsultatie.Text = "Stergere consultatie";
-            this.toolTip1.SetToolTip(this.buttonStergeConsultatie, "Inregistrarea iesirii unui pacient din lista dumneavoastra");
+            this.toolTip1.SetToolTip(this.buttonStergeConsultatie, "Stergerea unei consultatii existente.");
             this.buttonStergeConsultatie.UseVisualStyleBackColor = true;
             this.buttonStergeConsultatie.Click += new System.EventHandler(this.buttonStergeConsultatie_Click);
             // 
@@ -333,8 +333,9 @@ namespace EESSP
             this.buttonModificaConsultatie.Size = new System.Drawing.Size(134, 23);
             this.buttonModificaConsultatie.TabIndex = 2;
             this.buttonModificaConsultatie.Text = "Modificare consultatie";
-            this.toolTip1.SetToolTip(this.buttonModificaConsultatie, "Modificarea datelor pacientului (selectati pacientul)");
+            this.toolTip1.SetToolTip(this.buttonModificaConsultatie, "Modificarea datei unei consultatii.");
             this.buttonModificaConsultatie.UseVisualStyleBackColor = true;
+            this.buttonModificaConsultatie.Click += new System.EventHandler(this.buttonModificaConsultatie_Click);
             // 
             // buttonAdaugaConsultatie
             // 
@@ -343,7 +344,7 @@ namespace EESSP
             this.buttonAdaugaConsultatie.Size = new System.Drawing.Size(134, 23);
             this.buttonAdaugaConsultatie.TabIndex = 0;
             this.buttonAdaugaConsultatie.Text = "Adaugare consultatie";
-            this.toolTip1.SetToolTip(this.buttonAdaugaConsultatie, "Adaugarea unui nou pacient in sistem");
+            this.toolTip1.SetToolTip(this.buttonAdaugaConsultatie, "Adaugarea unei noi consultatii.");
             this.buttonAdaugaConsultatie.UseVisualStyleBackColor = true;
             // 
             // buttonVizualizareConsultatie
@@ -353,7 +354,7 @@ namespace EESSP
             this.buttonVizualizareConsultatie.Size = new System.Drawing.Size(134, 23);
             this.buttonVizualizareConsultatie.TabIndex = 6;
             this.buttonVizualizareConsultatie.Text = "Vizualizare consultatie";
-            this.toolTip1.SetToolTip(this.buttonVizualizareConsultatie, "Adaugarea unui diagnostic pacientului consultat.");
+            this.toolTip1.SetToolTip(this.buttonVizualizareConsultatie, "Vizualizarea unei consultatii si finalizarea acesteia.");
             this.buttonVizualizareConsultatie.UseVisualStyleBackColor = true;
             this.buttonVizualizareConsultatie.Click += new System.EventHandler(this.buttonVizualizareConsultatie_Click);
             // 

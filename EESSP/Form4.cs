@@ -38,6 +38,14 @@ namespace EESSP
             this.screen = screen;
         }
 
+        public Form4(MainApp parentForm, Consultatie consultatie, Screen screen)
+        {
+            InitializeComponent();
+            this.parentForm = parentForm;
+            this.consultatie = consultatie;
+            this.screen = screen;
+        }
+
         private void Form4_onLoad(object sender, EventArgs e)
         {
             if (screen == Screen.AdaugaConsultatieCnp)
@@ -55,6 +63,14 @@ namespace EESSP
                 var pacientConsultatie = _dbContext.Pacient.Where(pacient => pacient.CNP.Equals(consultatie.CnpPacient)).FirstOrDefault();
                 textBoxPacientConsultatie.Text = pacientConsultatie.Nume.Trim() + " " + pacientConsultatie.Prenume.Trim();
                 textBoxDataConsultatie.Text = consultatie.DataConsultatie.ToString("d");
+            }
+            else if (screen == Screen.ModificaConsultatie)
+            {
+                panelModificaConsultatie.BringToFront();
+                textBoxCnpModificare.Text = consultatie.CnpPacient;
+                var pacientConsultatie = _dbContext.Pacient.Where(pacient => pacient.CNP.Equals(consultatie.CnpPacient)).FirstOrDefault();
+                textBoxPacientModificare.Text = pacientConsultatie.Nume.Trim() + " " + pacientConsultatie.Prenume.Trim();
+                dateTimePickerModificareConsultatie.Value = consultatie.DataConsultatie;
             }
         }
 
@@ -116,6 +132,19 @@ namespace EESSP
                 var response = MessageBox.Show("Consultatia pentru a fost actualizata.", "", MessageBoxButtons.OK);
                 if (response == DialogResult.OK)
                     this.Close();
+            }
+        }
+
+        private void buttonSalveazaModificari_Click(object sender, EventArgs e)
+        {
+            consultatie.DataConsultatie = dateTimePickerModificareConsultatie.Value;
+            _dbContext.Update(consultatie);
+            _dbContext.SaveChanges();
+            var response = MessageBox.Show("Data consultatiei a fost modificata", "", MessageBoxButtons.OK);
+            if (response == DialogResult.OK)
+            {
+                parentForm.refreshConsultatiiList();
+                this.Close();
             }
         }
     }
