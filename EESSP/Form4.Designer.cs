@@ -194,6 +194,7 @@ namespace EESSP
             this.buttonSalveazaConsultatie.TabIndex = 1;
             this.buttonSalveazaConsultatie.Text = "Salveaza consultatia";
             this.buttonSalveazaConsultatie.UseVisualStyleBackColor = true;
+            this.buttonSalveazaConsultatie.Click += new System.EventHandler(this.buttonSalveazaConsultatie_Click);
             // 
             // textBoxRecomandari
             // 

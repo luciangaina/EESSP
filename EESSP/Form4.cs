@@ -100,5 +100,23 @@ namespace EESSP
             else
                 textBoxNumeDiagnostic.Text = diagnostic.NumeDiagnostic;
         }
+
+        private void buttonSalveazaConsultatie_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxCnpConsultatie.Text) || string.IsNullOrEmpty(textBoxDataConsultatie.Text) || string.IsNullOrEmpty(textBoxCodDiagnostic.Text))
+                MessageBox.Show("Campurile obligatorii nu sunt completate!", "Eroare", MessageBoxButtons.OK);
+            else
+            {
+                consultatie.CodDiagnostic = textBoxCodDiagnostic.Text;
+                consultatie.Medicatie = textBoxMedicatie.Text;
+                consultatie.Recoamndari = textBoxRecomandari.Text;
+
+                _dbContext.Update(consultatie);
+                _dbContext.SaveChangesAsync();
+                var response = MessageBox.Show("Consultatia pentru a fost actualizata.", "", MessageBoxButtons.OK);
+                if (response == DialogResult.OK)
+                    this.Close();
+            }
+        }
     }
 }
