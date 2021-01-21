@@ -29,6 +29,7 @@ namespace EESSP
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelAdaugareConsultatie = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.buttonAdaugaConsultatie = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@ namespace EESSP
             this.textBoxCnpConsultatie = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.labelVizualizareConsultatie = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelAdaugareConsultatie.SuspendLayout();
             this.panelVizualizareConsultatie.SuspendLayout();
             this.SuspendLayout();
@@ -203,6 +205,7 @@ namespace EESSP
             this.textBoxRecomandari.Name = "textBoxRecomandari";
             this.textBoxRecomandari.Size = new System.Drawing.Size(217, 75);
             this.textBoxRecomandari.TabIndex = 58;
+            this.toolTip1.SetToolTip(this.textBoxRecomandari, "Se completeaza cu observatii si recomandari pe perioada tratamentului.");
             // 
             // label3
             // 
@@ -221,6 +224,7 @@ namespace EESSP
             this.textBoxMedicatie.Name = "textBoxMedicatie";
             this.textBoxMedicatie.Size = new System.Drawing.Size(217, 75);
             this.textBoxMedicatie.TabIndex = 56;
+            this.toolTip1.SetToolTip(this.textBoxMedicatie, "Se completeaza cu medicamentele si doza recomandata.");
             // 
             // label12
             // 
@@ -276,6 +280,7 @@ namespace EESSP
             this.textBoxCodDiagnostic.Name = "textBoxCodDiagnostic";
             this.textBoxCodDiagnostic.Size = new System.Drawing.Size(61, 23);
             this.textBoxCodDiagnostic.TabIndex = 50;
+            this.toolTip1.SetToolTip(this.textBoxCodDiagnostic, "Se introduce codul diagnosticului. (Cod 999)");
             this.textBoxCodDiagnostic.Leave += new System.EventHandler(this.textBoxCodDiagnostic_Leave);
             // 
             // label10
@@ -401,5 +406,6 @@ namespace EESSP
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxRecomandari;
         private System.Windows.Forms.Button buttonSalveazaConsultatie;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
