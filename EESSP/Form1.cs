@@ -217,7 +217,7 @@ namespace EESSP
                     MessageBox.Show("Consultatia nu se poate modifica, deoarece a fost finalizata.", "Eroare", MessageBoxButtons.OK);
                 else
                 {
-                    Form4 vizualizareConsultatie = new Form4(consultatie, Screen.VizualizareConsultatie);
+                    Form4 vizualizareConsultatie = new Form4(this, consultatie, Screen.VizualizareConsultatie);
                     vizualizareConsultatie.ShowDialog();
                 }
             }

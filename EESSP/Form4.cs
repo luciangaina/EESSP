@@ -133,7 +133,10 @@ namespace EESSP
                 _dbContext.SaveChangesAsync();
                 var response = MessageBox.Show("Consultatia pentru a fost actualizata.", "", MessageBoxButtons.OK);
                 if (response == DialogResult.OK)
+                {
                     this.Close();
+                    parentForm.refreshConsultatiiList();
+                }
             }
         }
 
