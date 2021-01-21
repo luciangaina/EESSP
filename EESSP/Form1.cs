@@ -46,7 +46,7 @@ namespace EESSP
             var pacienti = await _dbContext.Pacient.OrderBy(pacient => pacient.Nume).ToListAsync();
             foreach (var pacient in pacienti)
             {
-                var row = new string[] { pacient.Nume, pacient.Prenume, pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa };
+                var row = new string[] { pacient.Nume.Trim(), pacient.Prenume.Trim(), pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa.Trim() };
                 var listItem = new ListViewItem(row);
                 listItem.Tag = pacient;
                 if (!pacient.EstePacient)
@@ -67,7 +67,7 @@ namespace EESSP
 
             var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
 
-            var textMessageBox = "Doriti sa inregistrati decesul pentru pacientul " + pacient.Nume + " " + pacient.Prenume + "?";
+            var textMessageBox = "Doriti sa inregistrati decesul pentru pacientul " + pacient.Nume.Trim() + " " + pacient.Prenume.Trim() + "?";
             var response = MessageBox.Show(textMessageBox, "", MessageBoxButtons.YesNo);
 
             if (response == DialogResult.Yes)
@@ -86,7 +86,7 @@ namespace EESSP
 
             var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
 
-            var textMessageBox = "Doriti sa inregistrati iesirea pacientului: " + pacient.Nume + " " + pacient.Prenume + "?";
+            var textMessageBox = "Doriti sa inregistrati iesirea pacientului: " + pacient.Nume.Trim() + " " + pacient.Prenume.Trim() + "?";
             var response = MessageBox.Show(textMessageBox, "", MessageBoxButtons.YesNo);
 
             if (response == DialogResult.Yes)
