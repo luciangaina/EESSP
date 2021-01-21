@@ -121,10 +121,16 @@ namespace EESSP
             this.label22 = new System.Windows.Forms.Label();
             this.tabPageIstoricMedical = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
+            this.listViewConsultatiiPacient = new System.Windows.Forms.ListView();
+            this.label47 = new System.Windows.Forms.Label();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.panelEditPacient.SuspendLayout();
             this.panelFisaPacient.SuspendLayout();
             this.tabControlPacient.SuspendLayout();
             this.tabPageInformatii.SuspendLayout();
+            this.tabPageIstoricMedical.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEditPacient
@@ -587,6 +593,7 @@ namespace EESSP
             // 
             // tabPageInformatii
             // 
+            this.tabPageInformatii.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tabPageInformatii.Controls.Add(this.labelGreutate);
             this.tabPageInformatii.Controls.Add(this.labelInaltime);
             this.tabPageInformatii.Controls.Add(this.label1);
@@ -635,7 +642,6 @@ namespace EESSP
             this.tabPageInformatii.Size = new System.Drawing.Size(667, 292);
             this.tabPageInformatii.TabIndex = 0;
             this.tabPageInformatii.Text = "Informatii pacient";
-            this.tabPageInformatii.UseVisualStyleBackColor = true;
             // 
             // labelGreutate
             // 
@@ -1037,13 +1043,15 @@ namespace EESSP
             // 
             // tabPageIstoricMedical
             // 
+            this.tabPageIstoricMedical.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tabPageIstoricMedical.Controls.Add(this.label47);
+            this.tabPageIstoricMedical.Controls.Add(this.listViewConsultatiiPacient);
             this.tabPageIstoricMedical.Location = new System.Drawing.Point(4, 24);
             this.tabPageIstoricMedical.Name = "tabPageIstoricMedical";
             this.tabPageIstoricMedical.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageIstoricMedical.Size = new System.Drawing.Size(667, 292);
             this.tabPageIstoricMedical.TabIndex = 1;
             this.tabPageIstoricMedical.Text = "Istoric medical";
-            this.tabPageIstoricMedical.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -1054,6 +1062,47 @@ namespace EESSP
             this.label23.Size = new System.Drawing.Size(111, 19);
             this.label23.TabIndex = 0;
             this.label23.Text = "Fisa pacientului";
+            // 
+            // listViewConsultatiiPacient
+            // 
+            this.listViewConsultatiiPacient.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listViewConsultatiiPacient.FullRowSelect = true;
+            this.listViewConsultatiiPacient.GridLines = true;
+            this.listViewConsultatiiPacient.HideSelection = false;
+            this.listViewConsultatiiPacient.Location = new System.Drawing.Point(20, 41);
+            this.listViewConsultatiiPacient.Name = "listViewConsultatiiPacient";
+            this.listViewConsultatiiPacient.Size = new System.Drawing.Size(625, 232);
+            this.listViewConsultatiiPacient.TabIndex = 0;
+            this.listViewConsultatiiPacient.UseCompatibleStateImageBehavior = false;
+            this.listViewConsultatiiPacient.View = System.Windows.Forms.View.Details;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label47.Location = new System.Drawing.Point(4, 13);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(107, 15);
+            this.label47.TabIndex = 1;
+            this.label47.Text = "Lista consultatiilor";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Data consultatie";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Diagnostic";
+            this.columnHeader2.Width = 300;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Medicatie";
+            this.columnHeader3.Width = 220;
             // 
             // Form3
             // 
@@ -1072,6 +1121,8 @@ namespace EESSP
             this.tabControlPacient.ResumeLayout(false);
             this.tabPageInformatii.ResumeLayout(false);
             this.tabPageInformatii.PerformLayout();
+            this.tabPageIstoricMedical.ResumeLayout(false);
+            this.tabPageIstoricMedical.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1170,5 +1221,10 @@ namespace EESSP
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListView listViewConsultatiiPacient;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
