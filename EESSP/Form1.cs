@@ -57,7 +57,7 @@ namespace EESSP
         private void buttonAddPatient_Click(object sender, EventArgs e)
         {
             Form2 adaugarePacient = new Form2(this);
-            adaugarePacient.Show();
+            adaugarePacient.ShowDialog();
         }
 
         private void buttonDeathPatient_Click(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace EESSP
                 var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
 
                 Form3 editarePacient = new Form3(this, pacient, Screen.ModificaPacient);
-                editarePacient.Show();
+                editarePacient.ShowDialog();
             }
         }
 
@@ -153,7 +153,7 @@ namespace EESSP
                 if (pacient.EstePacient)
                 {
                     Form3 editarePacient = new Form3(this, pacient, Screen.FisaPacient);
-                    editarePacient.Show();
+                    editarePacient.ShowDialog();
                 }
                 else
                     MessageBox.Show("Pacientul selectat nu mai apartine sistemului!", "Eroare", MessageBoxButtons.OK);
@@ -172,7 +172,7 @@ namespace EESSP
                 var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
 
                 Form4 adaugareConsultatie = new Form4(pacient, Screen.AdaugaConsultatieCnp);
-                adaugareConsultatie.Show();
+                adaugareConsultatie.ShowDialog();
             }
         }
 
@@ -212,7 +212,7 @@ namespace EESSP
                 var consultatie = _dbContext.Consultatie.Where(consultatie => consultatie.Id == idConsultatie).FirstOrDefault();
 
                 Form4 vizualizareConsultatie = new Form4(consultatie, Screen.VizualizareConsultatie);
-                vizualizareConsultatie.Show();
+                vizualizareConsultatie.ShowDialog();
             }
         }
     }
