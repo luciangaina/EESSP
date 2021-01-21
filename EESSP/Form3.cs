@@ -130,7 +130,10 @@ namespace EESSP
             {
                 listViewConsultatiiPacient.Items.Clear();
 
-                var consultatii = await _dbContext.Consultatie.OrderByDescending(consultatie => consultatie.DataConsultatie).ToListAsync();
+                var consultatii = await _dbContext.Consultatie
+                    .Where(consultatie => consultatie.CnpPacient.Equals(pacient.CNP))
+                    .OrderByDescending(consultatie => consultatie.DataConsultatie)
+                    .ToListAsync();
                 foreach (var consultatie in consultatii)
                 {
                     var diagnostic = _dbContext.Diagnostic.Where(diagnostic => diagnostic.CodDiagnostic.Equals(consultatie.CodDiagnostic)).FirstOrDefault();
