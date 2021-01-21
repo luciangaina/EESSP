@@ -120,12 +120,12 @@ namespace EESSP
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tabPageIstoricMedical = new System.Windows.Forms.TabPage();
-            this.label23 = new System.Windows.Forms.Label();
-            this.listViewConsultatiiPacient = new System.Windows.Forms.ListView();
             this.label47 = new System.Windows.Forms.Label();
+            this.listViewConsultatiiPacient = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.label23 = new System.Windows.Forms.Label();
             this.panelEditPacient.SuspendLayout();
             this.panelFisaPacient.SuspendLayout();
             this.tabControlPacient.SuspendLayout();
@@ -590,6 +590,7 @@ namespace EESSP
             this.tabControlPacient.SelectedIndex = 0;
             this.tabControlPacient.Size = new System.Drawing.Size(675, 320);
             this.tabControlPacient.TabIndex = 1;
+            this.tabControlPacient.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlPatient_Selected);
             // 
             // tabPageInformatii
             // 
@@ -1053,15 +1054,15 @@ namespace EESSP
             this.tabPageIstoricMedical.TabIndex = 1;
             this.tabPageIstoricMedical.Text = "Istoric medical";
             // 
-            // label23
+            // label47
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(0, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(111, 19);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Fisa pacientului";
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label47.Location = new System.Drawing.Point(4, 13);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(107, 15);
+            this.label47.TabIndex = 1;
+            this.label47.Text = "Lista consultatiilor";
             // 
             // listViewConsultatiiPacient
             // 
@@ -1079,16 +1080,6 @@ namespace EESSP
             this.listViewConsultatiiPacient.UseCompatibleStateImageBehavior = false;
             this.listViewConsultatiiPacient.View = System.Windows.Forms.View.Details;
             // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label47.Location = new System.Drawing.Point(4, 13);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(107, 15);
-            this.label47.TabIndex = 1;
-            this.label47.Text = "Lista consultatiilor";
-            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Data consultatie";
@@ -1103,6 +1094,16 @@ namespace EESSP
             // 
             this.columnHeader3.Text = "Medicatie";
             this.columnHeader3.Width = 220;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.Location = new System.Drawing.Point(0, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(111, 19);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Fisa pacientului";
             // 
             // Form3
             // 

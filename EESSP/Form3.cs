@@ -1,10 +1,12 @@
 ﻿using EESSP.Contexts;
 using EESSP.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -119,6 +121,29 @@ namespace EESSP
             {
                 parentForm.refreshPatientsList();
                 this.Close();
+            }
+        }
+
+        private async void tabControlPatient_Selected(object sender, TabControlEventArgs e)
+        {
+            if (tabControlPacient.SelectedTab == tabPageIstoricMedical)
+            {
+                listViewConsultatiiPacient.Items.Clear();
+
+                var consultatii = await _dbContext.Consultatie.OrderByDescending(consultatie => consultatie.DataConsultatie).ToListAsync();
+                foreach (var consultatie in consultatii)
+                {
+                    var diagnostic = _dbContext.Diagnostic.Where(diagnostic => diagnostic.CodDiagnostic.Equals(consultatie.CodDiagnostic)).FirstOrDefault();
+
+                    if (diagnostic != null)
+                    {
+                        var row = new string[] { consultatie.DataConsultatie.ToString("d"), diagnostic.NumeDiagnostic, consultatie.Medicatie };
+                        var listItem = new ListViewItem(row);
+                        listItem.Tag = consultatie;
+                        if (!consultatie.EsteSters && !string.IsNullOrEmpty(consultatie.CodDiagnostic))
+                            listViewConsultatiiPacient.Items.Add(listItem);
+                    }
+                }
             }
         }
     }
