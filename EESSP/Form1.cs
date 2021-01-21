@@ -131,8 +131,9 @@ namespace EESSP
             {
                 var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP.Equals(consultatie.CnpPacient)).FirstOrDefault();
                 var numePacient = pacient.Nume.Trim() + " " + pacient.Prenume.Trim();
+                var finalizata = consultatie.EsteFinalizata ? "Da" : "Nu";
 
-                var row = new string[] { consultatie.Id.ToString(), consultatie.DataConsultatie.ToString("d"), consultatie.DataConsultatie.TimeOfDay.ToString(), numePacient };
+                var row = new string[] { consultatie.Id.ToString(), consultatie.DataConsultatie.ToString("d"), consultatie.DataConsultatie.TimeOfDay.ToString(), numePacient, finalizata };
                 var listItem = new ListViewItem(row);
                 listItem.Tag = consultatie;
                 if (!consultatie.EsteSters)
@@ -212,8 +213,13 @@ namespace EESSP
                 var idConsultatie = int.Parse(listViewConsultatii.SelectedItems[0].SubItems[0].Text);
                 var consultatie = _dbContext.Consultatie.Where(consultatie => consultatie.Id == idConsultatie).FirstOrDefault();
 
-                Form4 vizualizareConsultatie = new Form4(consultatie, Screen.VizualizareConsultatie);
-                vizualizareConsultatie.ShowDialog();
+                if (consultatie.EsteFinalizata)
+                    MessageBox.Show("Consultatia nu se poate modifica, deoarece a fost finalizata.", "Eroare", MessageBoxButtons.OK);
+                else
+                {
+                    Form4 vizualizareConsultatie = new Form4(consultatie, Screen.VizualizareConsultatie);
+                    vizualizareConsultatie.ShowDialog();
+                }
             }
         }
 
@@ -228,8 +234,13 @@ namespace EESSP
                 var idConsultatie = int.Parse(listViewConsultatii.SelectedItems[0].SubItems[0].Text);
                 var consultatie = _dbContext.Consultatie.Where(consultatie => consultatie.Id == idConsultatie).FirstOrDefault();
 
-                Form4 modificareConsultatie = new Form4(this, consultatie, Screen.ModificaConsultatie);
-                modificareConsultatie.ShowDialog();
+                if (!consultatie.EsteFinalizata)
+                {
+                    Form4 modificareConsultatie = new Form4(this, consultatie, Screen.ModificaConsultatie);
+                    modificareConsultatie.ShowDialog();
+                }
+                else
+                    MessageBox.Show("Consultatia nu se poate modifica, deoarece a fost finalizata.", "Eroare", MessageBoxButtons.OK);
             }
         }
     }

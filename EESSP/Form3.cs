@@ -143,7 +143,7 @@ namespace EESSP
                         var row = new string[] { consultatie.DataConsultatie.ToString("d"), diagnostic.NumeDiagnostic, consultatie.Medicatie };
                         var listItem = new ListViewItem(row);
                         listItem.Tag = consultatie;
-                        if (!consultatie.EsteSters && !string.IsNullOrEmpty(consultatie.CodDiagnostic))
+                        if (!consultatie.EsteSters && consultatie.EsteFinalizata)
                             listViewConsultatiiPacient.Items.Add(listItem);
                     }
                 }

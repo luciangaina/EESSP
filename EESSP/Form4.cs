@@ -80,7 +80,8 @@ namespace EESSP
             {
                 CnpPacient = textBoxCNP.Text,
                 DataConsultatie = datePickerDataConsultatie.Value,
-                EsteSters = false
+                EsteSters = false,
+                EsteFinalizata = false
             };
 
             _dbContext.Consultatie.Add(newConsultatie);
@@ -126,6 +127,7 @@ namespace EESSP
                 consultatie.CodDiagnostic = textBoxCodDiagnostic.Text;
                 consultatie.Medicatie = textBoxMedicatie.Text;
                 consultatie.Recoamndari = textBoxRecomandari.Text;
+                consultatie.EsteFinalizata = true;
 
                 _dbContext.Update(consultatie);
                 _dbContext.SaveChangesAsync();

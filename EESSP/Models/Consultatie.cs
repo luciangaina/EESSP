@@ -13,5 +13,6 @@ namespace EESSP.Models
         public string Medicatie { get; set; }
         public string Recoamndari { get; set; }
         public bool EsteSters { get; set; }
+        public bool EsteFinalizata { get; set; }
     }
 }

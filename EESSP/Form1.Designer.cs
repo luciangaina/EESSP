@@ -63,6 +63,7 @@ namespace EESSP
             this.buttonAdaugaConsultatie = new System.Windows.Forms.Button();
             this.buttonVizualizareConsultatie = new System.Windows.Forms.Button();
             this.panelConsultatii = new System.Windows.Forms.Panel();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.panelHome.SuspendLayout();
             this.panelPacienti.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -282,7 +283,8 @@ namespace EESSP
             this.columnHeader5,
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.listViewConsultatii.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listViewConsultatii.FullRowSelect = true;
             this.listViewConsultatii.GridLines = true;
@@ -370,6 +372,11 @@ namespace EESSP
             this.panelConsultatii.Size = new System.Drawing.Size(775, 410);
             this.panelConsultatii.TabIndex = 6;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Finalizata";
+            this.columnHeader4.Width = 70;
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -430,6 +437,7 @@ namespace EESSP
         private System.Windows.Forms.Button buttonCreazaConsultatie;
         private System.Windows.Forms.Button buttonVizualizareConsultatie;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 
