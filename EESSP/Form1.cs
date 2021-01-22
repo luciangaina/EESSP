@@ -46,7 +46,7 @@ namespace EESSP
             var pacienti = await _dbContext.Pacient.OrderBy(pacient => pacient.Nume).ToListAsync();
             foreach (var pacient in pacienti)
             {
-                var row = new string[] { pacient.Nume.Trim(), pacient.Prenume.Trim(), pacient.Varsta.ToString(), pacient.Gen, pacient.CNP, pacient.NrFisa.Trim() };
+                var row = new string[] { pacient.Nume.Trim(), pacient.Prenume.Trim(), pacient.Gen, pacient.Varsta.ToString(), pacient.CNP, pacient.NrFisa.Trim() };
                 var listItem = new ListViewItem(row);
                 listItem.Tag = pacient;
                 if (!pacient.EstePacient)
