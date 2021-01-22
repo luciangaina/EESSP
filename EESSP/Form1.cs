@@ -173,8 +173,13 @@ namespace EESSP
                 var cnpPacient = listViewPacienti.SelectedItems[0].SubItems[4].Text;
                 var pacient = _dbContext.Pacient.Where(pacient => pacient.CNP == cnpPacient).FirstOrDefault();
 
-                Form4 adaugareConsultatie = new Form4(pacient, Screen.AdaugaConsultatieCnp);
-                adaugareConsultatie.ShowDialog();
+                if (pacient.EstePacient)
+                {
+                    Form4 adaugareConsultatie = new Form4(pacient, Screen.AdaugaConsultatieCnp);
+                    adaugareConsultatie.ShowDialog();
+                }
+                else
+                    MessageBox.Show("Nu se poate adauga o consultatie! Pacientul nu se mai afla in lista cabinetului.", "Eroare", MessageBoxButtons.OK);
             }
         }
 
